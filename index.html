@@ -1,1003 +1,809 @@
-<!DOCTYPE html>
-
-<html class="scroll-smooth" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>All Florida Homes Realty | Central Florida Premier Real Estate &amp; Luxury Acreage</title>
-<!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind CSS CDN with Forms & Container Queries -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Tailwind Configuration matching Estate Noir & Gold Theme -->
-<script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            noir: {
-              950: '#07080a',
-              900: '#0c0e11',
-              850: '#111316',
-              800: '#171a1f',
-              700: '#22262d',
-              600: '#323742'
-            },
-            gold: {
-              300: '#f5e4a8',
-              400: '#e5ca68',
-              500: '#d4af37',
-              600: '#b89428',
-              700: '#91721b'
-            },
-            accent: {
-              sand: '#e8dec8',
-              amber: '#f59e0b'
-            }
-          },
-          fontFamily: {
-            serif: ['"Playfair Display"', 'Georgia', 'serif'],
-            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
-          }
-        }
-      }
-    }
-  </script>
-<!-- Custom Core Styles -->
-<style data-purpose="base-styling">
-    body {
-      background-color: #0c0e11;
-      color: #e5e7eb;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      overflow-x: hidden;
-      letter-spacing: -0.01em;
-    }
-    .font-editorial {
-      font-family: 'Playfair Display', serif;
-    }
-    .gold-gradient-text {
-      background: linear-gradient(135deg, #fceda7 0%, #d4af37 55%, #aa841c 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .gold-border-glow {
-      box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.15);
-    }
-    .gold-border-glow:hover {
-      box-shadow: 0 0 35px 0px rgba(212, 175, 55, 0.35);
-    }
-    .glass-card {
-      background: rgba(17, 19, 22, 0.78);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 1px solid rgba(212, 175, 55, 0.18);
-    }
-  </style>
-</head>
-<body class="selection:bg-gold-500 selection:text-noir-950 text-gray-200 antialiased">
-<!-- BEGIN: TopBar -->
-<div class="bg-noir-950 border-b border-gold-500/15 py-2 px-4 sm:px-8 text-xs font-medium tracking-wide" data-purpose="announcement-bar">
-<div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-gray-400">
-<div class="flex items-center gap-6">
-<span class="flex items-center gap-1.5 text-gold-400">
-<svg class="w-3.5 h-3.5 fill-current" viewbox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
-          Ocala • Marion &amp; Alachua County • Sarasota • Central Florida
-        </span>
-<span class="hidden md:inline-block text-gray-600">|</span>
-<span class="hidden md:inline-block">Licensed Real Estate Brokerage</span>
+<!DOCTYPE html><html class="dark" lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"surface-container":"#1e2023","on-surface-variant":"#d0c5af","on-background":"#e2e2e6","error":"#ffb4ab","primary-fixed":"#ffe088","secondary-fixed":"#ffdea5","on-secondary-container":"#dab36a","surface-tint":"#e9c349","on-tertiary-container":"#3d4559","secondary-container":"#604403","on-tertiary":"#283043","on-tertiary-fixed":"#131b2d","on-secondary":"#412d00","inverse-on-surface":"#2f3034","on-primary":"#3c2f00","tertiary-fixed-dim":"#bec6de","surface-container-low":"#1a1c1f","tertiary-container":"#abb3ca","surface-dim":"#111316","surface-variant":"#333538","inverse-primary":"#735c00","secondary":"#e9c176","on-primary-fixed":"#241a00","on-error-container":"#ffdad6","surface":"#111316","surface-container-high":"#282a2d","on-primary-container":"#554300","surface-container-highest":"#333538","on-primary-fixed-variant":"#574500","background":"#111316","on-secondary-fixed":"#261900","on-tertiary-fixed-variant":"#3f475a","primary-fixed-dim":"#e9c349","outline":"#99907c","on-secondary-fixed-variant":"#5d4201","primary-container":"#d4af37","tertiary-fixed":"#dae2fb","primary":"#f2ca50","inverse-surface":"#e2e2e6","tertiary":"#c7cee6","on-surface":"#e2e2e6","secondary-fixed-dim":"#e9c176","on-error":"#690005","surface-container-lowest":"#0c0e11","surface-bright":"#37393d","error-container":"#93000a","outline-variant":"#4d4635"},"borderRadius":{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},"spacing":{"space-xs":"0.25rem","space-lg":"1.75rem","space-sm":"0.5rem","margin":"4rem","space-xl":"3rem","gutter":"2rem","space-md":"1rem","gutter-mobile":"1rem","margin-mobile":"1.25rem"},"fontFamily":{"body-sm":["Plus Jakarta Sans"],"headline-sm":["Playfair Display"],"headline-lg-mobile":["Playfair Display"],"body-lg":["Plus Jakarta Sans"],"price-display":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"headline-lg":["Playfair Display"],"display-xl-mobile":["Playfair Display"],"display-xl":["Playfair Display"],"headline-md":["Playfair Display"],"body-md":["Plus Jakarta Sans"]},"fontSize":{"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"400"}],"headline-sm":["22px",{"lineHeight":"30px","letterSpacing":"0em","fontWeight":"600"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"price-display":["26px",{"lineHeight":"32px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-md":["11px",{"lineHeight":"16px","letterSpacing":"0.14em","fontWeight":"600"}],"label-lg":["13px",{"lineHeight":"18px","letterSpacing":"0.12em","fontWeight":"600"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.015em","fontWeight":"500"}],"display-xl-mobile":["38px",{"lineHeight":"46px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-xl":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-md":["28px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"500"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 inset-x-0 z-50 bg-surface-dim/80 backdrop-blur-xl shadow-[0_20px_40px_-15px_rgba(0,0,0,0.65)]"><div class="h-20 w-full px-gutter-mobile lg:px-margin flex items-center justify-between"><a class="flex items-center gap-space-sm group text-left" data-path="home" href="#"><div class="w-9 h-9 rounded flex items-center justify-center bg-surface-container-high text-primary font-headline-sm text-headline-sm transition-transform duration-500 group-hover:scale-105">AF</div><div class="flex flex-col"><span class="font-headline-sm text-[15px] leading-tight tracking-[0.16em] uppercase text-on-surface group-hover:text-primary transition-colors">All Florida Homes</span><span class="font-label-md text-label-md tracking-[0.24em] uppercase text-on-surface-variant">Realty · Private Estates</span></div></a><nav class="hidden xl:flex items-center gap-space-md" data-active-classes="bg-secondary-container text-on-secondary-container font-label-lg rounded"><a class="px-space-sm py-1 font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" data-path="featured" href="#featured">Featured</a><a class="px-space-sm py-1 font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" data-path="listings" href="#listings">Listings</a><a class="px-space-sm py-1 font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" data-path="services" href="#services">Services</a><a class="px-space-sm py-1 font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" data-path="farms-acreage" href="#farms-acreage">Farms &amp; Acreage</a><a class="px-space-sm py-1 font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" data-path="about" href="#about">About</a><a class="px-space-sm py-1 font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" data-path="reviews" href="#reviews">Reviews</a><a class="px-space-sm py-1 font-label-lg text-label-lg uppercase text-on-surface-variant hover:text-primary hover:bg-surface-container transition-all" data-path="contact" href="#contact">Contact</a></nav><div class="flex items-center gap-space-md"><a class="hidden lg:flex items-center gap-space-xs font-label-lg text-label-lg uppercase text-on-surface tracking-wider hover:text-primary transition-colors" href="tel:3527895063"><span class="material-symbols-outlined text-[17px] text-primary">phone_in_talk</span><span class="">(352) 789-5063</span></a><a class="px-space-md py-2.5 rounded bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-widest hover:bg-secondary transition-all shadow-[0_0_20px_rgba(212,175,55,0.22)]" data-path="contact" href="#contact">Book Consultation</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-background"><div class="flex flex-col w-full text-on-surface">
+<!-- ==================== HERO SECTION ==================== -->
+<section class="relative w-full -mt-20 overflow-hidden flex flex-col justify-end min-h-[92vh] lg:min-h-[96vh]" id="hero">
+<!-- Background Image with Scrim Gradient -->
+<div class="absolute inset-0 z-0 overflow-hidden"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_T7c2JTWWBwoyJezyw9ygsRSvf7aMy9E9VfRoKoyzs_vtfpEnyE815Ncl0FBq4_AspLkjA35ezPc44VOyfNOYCqy2PUTKkRJSQyS82z6jvWduxjCmJlIdAikeT6awka_QMIfX0ucRIlKRH-n-gl6GSTQyHvhG3vilXf5ArwbXEUTGzCU7s2QhNsShbQbhsVvLSwWSjTOiUbHRZC-SCcnxDvlSN9KApHLyr9k8m7cq" alt="Ultra-luxury Florida coastal waterfront mansion estate" class="w-full h-full object-cover transition-transform duration-1000 scale-100 hover:scale-105"></div>
+<div class="absolute inset-0 z-10 bg-gradient-to-t from-surface-dim via-surface-dim/70 to-surface-dim/40 backdrop-blur-[1px]"></div>
+<div class="absolute inset-0 z-10 bg-radial-at-c from-transparent via-transparent to-surface-container-lowest/90"></div>
+<!-- Hero Content Overlay -->
+<div class="relative z-20 w-full max-w-[1440px] mx-auto px-gutter-mobile lg:px-margin pt-36 pb-12 flex flex-col justify-end">
+<!-- Monogram Tag -->
+<div class="flex items-center gap-space-sm mb-space-sm">
+<span class="inline-block w-8 h-[1px] bg-primary"></span>
+<span class="font-label-md text-label-md tracking-[0.28em] uppercase text-primary">Prestige Real Estate Brokerage · Central Florida</span>
 </div>
-<div class="flex items-center gap-6">
-<a class="hover:text-gold-400 transition-colors flex items-center gap-1.5 font-semibold text-gray-300" href="tel:3527895063">
-<svg class="w-3.5 h-3.5 text-gold-500" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-          (352) 789-5063
-        </a>
-<div class="flex items-center space-x-3 text-gray-400">
-<span class="hover:text-gold-400 cursor-pointer transition">FB</span>
-<span class="hover:text-gold-400 cursor-pointer transition">IG</span>
-<span class="hover:text-gold-400 cursor-pointer transition">YT</span>
+<!-- Monumental Typography -->
+<h1 class="font-display-xl text-headline-lg lg:text-display-xl tracking-tight text-on-surface max-w-4xl leading-[1.08] mb-space-sm">
+        Where Dreams Meet <span class="italic font-headline-lg text-primary font-normal">Legacy.</span>
+</h1>
+<p class="font-body-lg text-body-md lg:text-body-lg text-on-surface-variant max-w-2xl mb-space-lg leading-relaxed">
+        Equestrian acreage, waterfront sanctuaries, and bespoke Florida estates curated with white-glove discretion and generational precision.
+      </p>
+<!-- Luxury Inline Discovery Bar -->
+<div class="w-full bg-surface-container-high/90 backdrop-blur-xl p-space-sm lg:p-space-md rounded-xl shadow-2xl mb-space-lg">
+<form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm items-center" onsubmit="event.preventDefault(); document.getElementById('listings').scrollIntoView({behavior: 'smooth'});">
+<div class="flex flex-col bg-surface-container-low px-space-md py-2.5 rounded-lg">
+<span class="font-label-md text-label-md uppercase text-primary">Submarket</span>
+<select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer mt-0.5">
+<option class="bg-surface-container" value="all">All Florida Territories</option>
+<option class="bg-surface-container" value="ocala">Ocala · World Equestrian</option>
+<option class="bg-surface-container" value="sarasota">Sarasota · Waterfront Bay</option>
+<option class="bg-surface-container" value="archer">Archer · Country Ranches</option>
+<option class="bg-surface-container" value="gainesville">Gainesville · University Reserves</option>
+<option class="bg-surface-container" value="davenport">Davenport · Executive Golf</option>
+</select>
 </div>
+<div class="flex flex-col bg-surface-container-low px-space-md py-2.5 rounded-lg">
+<span class="font-label-md text-label-md uppercase text-primary">Asset Classification</span>
+<select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer mt-0.5">
+<option class="bg-surface-container" value="all">Waterfront &amp; Equestrian</option>
+<option class="bg-surface-container" value="estates">Architectural Manors</option>
+<option class="bg-surface-container" value="farms">Acreage &amp; Horse Farms</option>
+<option class="bg-surface-container" value="auctions">Absolute Auction Parcels</option>
+</select>
 </div>
+<div class="flex flex-col bg-surface-container-low px-space-md py-2.5 rounded-lg">
+<span class="font-label-md text-label-md uppercase text-primary">Valuation Tier</span>
+<select class="bg-transparent font-body-sm text-body-sm text-on-surface focus:outline-none cursor-pointer mt-0.5">
+<option class="bg-surface-container" value="all">$1,000,000 – $30,000,000+</option>
+<option class="bg-surface-container" value="tier1">$2,000,000 – $5,000,000</option>
+<option class="bg-surface-container" value="tier2">$5,000,000 – $15,000,000</option>
+<option class="bg-surface-container" value="tier3">$15,000,000+</option>
+</select>
 </div>
+<button class="w-full h-full min-h-[52px] flex items-center justify-center gap-space-xs bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-widest rounded-lg hover:bg-secondary transition-all shadow-[0_0_24px_rgba(212,175,55,0.3)]" type="submit">
+<span class="material-symbols-outlined text-[19px]">explore</span>
+<span class="">Explore Portfolio</span>
+</button>
+</form>
 </div>
-<!-- END: TopBar -->
-<!-- BEGIN: MainHeader -->
-<header class="sticky top-0 z-50 transition-all duration-300 bg-noir-900/90 backdrop-blur-md border-b border-white/5" id="site-header">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex items-center justify-between h-20">
-<!-- Logo Branding -->
-<a class="flex items-center gap-3 group" href="#">
-<div class="w-10 h-10 rounded-full border border-gold-500/40 flex items-center justify-center bg-noir-800 text-gold-400 group-hover:border-gold-400 transition">
-<svg class="w-5 h-5 text-gold-500" fill="currentColor" viewbox="0 0 24 24"><path d="M12.65 10A5.99 5.99 0 0 0 7 6c-3.31 0-6 2.69-6 6s2.69 6 6 6a5.99 5.99 0 0 0 5.65-4H17v4h4v-4h2v-4H12.65zM7 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path></svg>
-</div>
+<!-- Proven Performance Indicator Strip -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm pt-space-sm">
+<div class="flex items-center gap-space-sm bg-surface-container-low/70 px-space-md py-3 rounded-lg backdrop-blur-md">
+<span class="material-symbols-outlined text-primary text-[24px]">workspace_premium</span>
 <div class="flex flex-col">
-<span class="font-editorial text-xl sm:text-2xl font-bold tracking-tight text-white uppercase group-hover:text-gold-400 transition-colors">
-              ALL FLORIDA <span class="text-gold-500 font-light">HOMES REALTY</span>
-</span>
-<span class="text-[9px] tracking-[0.28em] uppercase text-gray-400 font-medium">Boutique Luxury • Equine • Land</span>
+<span class="font-headline-sm text-[19px] leading-tight text-on-surface">$120M+</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Closed Volume</span>
 </div>
-</a>
-<!-- Desktop Navigation Items -->
-<nav class="hidden lg:flex items-center space-x-7 text-sm font-medium text-gray-300">
-<a class="hover:text-gold-400 transition-colors py-1" href="#properties">Properties</a>
-<a class="hover:text-gold-400 transition-colors py-1" href="#services">Services</a>
-<a class="hover:text-gold-400 transition-colors py-1" href="#featured">Featured</a>
-<a class="hover:text-gold-400 transition-colors py-1" href="#farms">Farms &amp; Acreage</a>
-<a class="hover:text-gold-400 transition-colors py-1" href="#about">About Us</a>
-<a class="hover:text-gold-400 transition-colors py-1" href="#reviews">Reviews</a>
-<a class="hover:text-gold-400 transition-colors py-1" href="#contact">Contact</a>
-</nav>
-<!-- CTA & Phone Actions -->
-<div class="hidden sm:flex items-center gap-4">
-<a class="px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-gradient-to-r from-gold-600 via-gold-500 to-amber-500 text-noir-950 hover:brightness-110 transition shadow-lg shadow-gold-500/10" href="#contact">
-            Book Consultation
-          </a>
 </div>
-<!-- Mobile Menu Toggle Button -->
-<div class="lg:hidden flex items-center">
-<button aria-label="Toggle Navigation Menu" class="p-2 rounded-md text-gray-400 hover:text-white hover:bg-noir-800 focus:outline-none" id="mobile-menu-btn">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<div class="flex items-center gap-space-sm bg-surface-container-low/70 px-space-md py-3 rounded-lg backdrop-blur-md">
+<span class="material-symbols-outlined text-primary text-[24px]">history_edu</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[19px] leading-tight text-on-surface">20+ Years</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Excellence Heritage</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-low/70 px-space-md py-3 rounded-lg backdrop-blur-md">
+<span class="material-symbols-outlined text-primary text-[24px]">military_tech</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[19px] leading-tight text-on-surface">Top 20 Agent</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Central FL 2026</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-low/70 px-space-md py-3 rounded-lg backdrop-blur-md">
+<span class="material-symbols-outlined text-primary text-[24px]">verified</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-[19px] leading-tight text-on-surface">100% 5-Star</span>
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Client Acclaim</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== CURATED PORTFOLIO / LISTINGS ==================== -->
+<section class="w-full max-w-[1440px] mx-auto px-gutter-mobile lg:px-margin py-20 lg:py-28" id="featured">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-14" id="listings">
+<div class="flex flex-col max-w-2xl">
+<div class="flex items-center gap-space-xs mb-2">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+<span class="font-label-md text-label-md uppercase tracking-[0.22em] text-primary">Private Collection</span>
+</div>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-on-surface">
+          Curated Florida Properties
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Architectural sanctuaries, gulf-front enclaves, and equestrian centers selected for generational distinction.
+        </p>
+</div>
+<!-- Quick Submarket Filter Tags -->
+<div class="flex flex-wrap gap-2">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-highest text-primary font-label-md text-label-md uppercase tracking-wider hover:bg-secondary-container transition-all">All Holdings (4)</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md uppercase tracking-wider hover:text-on-surface hover:bg-surface-container transition-all">Waterfront</button>
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-low text-on-surface-variant font-label-md text-label-md uppercase tracking-wider hover:text-on-surface hover:bg-surface-container transition-all">Equestrian</button>
+</div>
+</div>
+<!-- Grid of Bespoke Showcase Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-xl">
+<!-- PROPERTY CARD 1: Sand Pine Compound -->
+<article class="group bg-surface-container rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:-translate-y-1">
+<div class="relative w-full h-64 overflow-hidden rounded-t-xl bg-surface-container-highest"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBDKQv34G3N2eduU_Z9nwqBETXy_cqj9QcrNT-YuMXtvXjwIRp9YYpYQla3TY6-Vc0at3Ddgnwrr8lq_PK-4Xd-nbJkC8FejHBCiluzNfQNNGJjATYlYh7kk8mSFiPF-rvOA_CGcuM802_fKvi-euPxBZLHunqVmc7O4QzLPRzI0WrrczSghl7jHvGEu-sKKBzd_mBVxwG9hAmyOsCWKDHhMglwoLzUvd1N_fEa_Xf" alt="The Sand Pine Road Compound" class="w-full h-64 object-cover rounded-t-xl transition-transform duration-500 group-hover:scale-105"><div class="absolute top-4 left-4 flex gap-2"><span class="px-3 py-1 bg-surface-dim/80 backdrop-blur-md rounded text-primary font-label-md text-label-md uppercase tracking-wider">Active</span><span class="px-3 py-1 bg-surface-dim/80 backdrop-blur-md rounded text-on-surface font-label-md text-label-md uppercase tracking-wider">Waterfront Retreat</span></div><div class="absolute top-4 right-4 bg-surface-dim/90 backdrop-blur-md px-3.5 py-1.5 rounded"><span class="font-price-display text-price-display text-primary">$23,850,000</span></div></div>
+<div class="p-6 lg:p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[15px] text-primary">location_on</span>
+              Davenport · Central Florida Reserve
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">
+              The Sand Pine Road Compound
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-6">
+              Grand modern architectural waterfront sanctuary featuring expansive glass spans, dual boat slips, infinity horizon edge pool, and gated private peninsula.
+            </p>
+</div>
+<!-- Specs Divider Ribbon -->
+<div class="pt-4 flex flex-wrap items-center justify-between gap-4 bg-surface-container-low px-4 py-3 rounded-lg mb-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[19px]">bed</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">7 Beds</span>
+</div>
+<div class="w-[1px] h-4 bg-surface-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[19px]">bathtub</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">9.5 Baths</span>
+</div>
+<div class="w-[1px] h-4 bg-surface-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[19px]">square_foot</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">13,420 SqFt</span>
+</div>
+<div class="w-[1px] h-4 bg-surface-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[19px]">landscape</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">3.80 Acres</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<a class="flex-1 py-3 text-center rounded bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-widest hover:bg-secondary transition-all" href="#contact">Schedule Showing</a>
+<button class="px-5 py-3 rounded bg-surface-container-high text-on-surface hover:text-primary font-label-lg text-label-lg uppercase tracking-wider transition-all flex items-center justify-center" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
 </button>
 </div>
 </div>
-</div>
-<!-- Mobile Drawer Nav -->
-<div class="hidden lg:hidden border-b border-gold-500/20 bg-noir-900/98 px-6 py-5 space-y-3 text-base" id="mobile-menu">
-<a class="block text-gray-300 hover:text-gold-400 py-1.5 border-b border-noir-800" href="#properties">Properties</a>
-<a class="block text-gray-300 hover:text-gold-400 py-1.5 border-b border-noir-800" href="#services">Services</a>
-<a class="block text-gray-300 hover:text-gold-400 py-1.5 border-b border-noir-800" href="#featured">Featured Listings</a>
-<a class="block text-gray-300 hover:text-gold-400 py-1.5 border-b border-noir-800" href="#farms">Farms &amp; Acreage</a>
-<a class="block text-gray-300 hover:text-gold-400 py-1.5 border-b border-noir-800" href="#about">About Nichole Roberts</a>
-<a class="block text-gray-300 hover:text-gold-400 py-1.5 border-b border-noir-800" href="#reviews">Client Reviews</a>
-<a class="block text-gray-300 hover:text-gold-400 py-1.5" href="#contact">Contact Us</a>
-<div class="pt-3">
-<a class="block text-center w-full py-3 rounded bg-gold-500 text-noir-950 font-bold text-sm" href="tel:3527895063">Call (352) 789-5063</a>
-</div>
-</div>
-</header>
-<!-- END: MainHeader -->
-<main>
-<!-- BEGIN: HeroSection -->
-<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-24">
-<!-- Parallax Background Image -->
-<div class="absolute inset-0 z-0">
-<img alt="Luxury Central &amp; Coastal Florida Waterfront Real Estate" class="w-full h-full object-cover object-center scale-105 transition-transform duration-700 ease-out brightness-[0.42]" id="hero-parallax-bg" src="https://lh3.googleusercontent.com/aida/AEtjO1Ui9nhzzwIF9M1_6jAsFEDOvkolEs9M7rHnX0FQ49MHWqle4-RkXxVFzaQwOTU4lgzXhP8FycZJEXC3fnf9DyBw_MjUHB373lOykKeKYP3HyRlHnQuGlzvGeODi5hrb4Fb6QX5k-Vuxdlx8TA5AB6RdRD9DJsKBzSpnl9YZl-Y9nWzABU-zUexa08UX0598jcB-57FVHDDhOTHnqiIDjjgTa2l0zK9YNcprY22q4Y7G_A"/>
-<div class="absolute inset-0 bg-gradient-to-t from-noir-950 via-noir-950/60 to-transparent"></div>
-<div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gold-500/5 via-transparent to-noir-950/90"></div>
-</div>
-<!-- Hero Copy and Instant Search Filter -->
-<div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-<!-- Sub-badge -->
-<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-gold-500/30 bg-noir-900/60 backdrop-blur-md mb-6 animate-pulse">
-<span class="w-2 h-2 rounded-full bg-gold-400"></span>
-<span class="text-xs uppercase tracking-widest text-gold-300 font-semibold">Central Florida's Premier Brokerage</span>
-</div>
-<!-- Main Title -->
-<h1 class="font-editorial text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white max-w-4xl leading-[1.12] mb-6">
-          Discover Central Florida: <br/>
-<span class="gold-gradient-text italic font-normal">Your Dream Home Awaits</span> in Florida's Hidden Gem
-        </h1>
-<!-- Subtitle -->
-<p class="text-lg sm:text-xl text-gray-300 max-w-2xl font-light mb-10 leading-relaxed">
-          From equestrian acreage &amp; expansive farm estates in Ocala &amp; Archer, to ultra-luxury waterfront retreats across Florida. Expert guidance from inquiry to closing.
-        </p>
-<!-- Filter Bar -->
-<div class="w-full max-w-4xl glass-card rounded-2xl p-3 sm:p-5 gold-border-glow shadow-2xl mb-8 text-left">
-<form class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3" id="hero-search-form">
-<div class="flex flex-col">
-<label class="text-[11px] font-semibold uppercase tracking-wider text-gray-400 mb-1">Location</label>
-<select class="bg-noir-800/90 border border-gray-700/60 rounded-lg text-sm text-white px-3 py-2.5 focus:border-gold-500 focus:ring-1 focus:ring-gold-500">
-<option>Ocala &amp; Marion Co.</option>
-<option>Archer &amp; Alachua Co.</option>
-<option>Gainesville</option>
-<option>Sarasota &amp; Coastal</option>
-<option>Davenport &amp; Polk Co.</option>
-</select>
-</div>
-<div class="flex flex-col">
-<label class="text-[11px] font-semibold uppercase tracking-wider text-gray-400 mb-1">Property Type</label>
-<select class="bg-noir-800/90 border border-gray-700/60 rounded-lg text-sm text-white px-3 py-2.5 focus:border-gold-500 focus:ring-1 focus:ring-gold-500">
-<option>All Types</option>
-<option>Equestrian &amp; Horse Farms</option>
-<option>Luxury Single Family</option>
-<option>Waterfront &amp; Coastal</option>
-<option>Acreage &amp; Auctions</option>
-</select>
-</div>
-<div class="flex flex-col">
-<label class="text-[11px] font-semibold uppercase tracking-wider text-gray-400 mb-1">Price Range</label>
-<select class="bg-noir-800/90 border border-gray-700/60 rounded-lg text-sm text-white px-3 py-2.5 focus:border-gold-500 focus:ring-1 focus:ring-gold-500">
-<option>$500,000 - $1,500,000</option>
-<option>$1,500,000 - $5,000,000</option>
-<option>$5,000,000 - $15,000,000</option>
-<option>$15,000,000+</option>
-<option>Farm Auctions ($1,000 Start)</option>
-</select>
-</div>
-<div class="flex items-end">
-<a class="w-full text-center py-2.5 px-4 rounded-lg bg-gold-500 hover:bg-gold-400 text-noir-950 font-bold text-sm tracking-wide transition uppercase shadow-md flex items-center justify-center gap-2" href="#properties">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path></svg>
-                Search Homes
-              </a>
-</div>
-</form>
-</div>
-<div class="flex flex-wrap items-center justify-center gap-6 text-xs text-gray-400">
-<span class="flex items-center gap-1.5"><span class="text-gold-400">✓</span> 100% Client Satisfaction</span>
-<span class="flex items-center gap-1.5"><span class="text-gold-400">✓</span> Verified Top 20 Agent 2026</span>
-<span class="flex items-center gap-1.5"><span class="text-gold-400">✓</span> Full MLS Central Florida Coverage</span>
-</div>
-</div>
-</section>
-<!-- END: HeroSection -->
-<!-- BEGIN: ServicesSection -->
-<section class="py-24 bg-noir-900 border-t border-noir-800 relative" id="services">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-<!-- Left Column Content -->
-<div class="lg:col-span-5 space-y-6">
-<span class="text-xs uppercase font-bold tracking-[0.25em] text-gold-500">What We Offer</span>
-<h2 class="font-editorial text-3xl sm:text-5xl font-bold text-white leading-tight">
-              Tailored Services for Every Step of Your Real Estate Experience
-            </h2>
-<div class="w-16 h-1 bg-gold-500 rounded-full"></div>
-<p class="text-gray-300 text-sm sm:text-base leading-relaxed">
-              Our real estate services focus on property sales, where we leverage market insights and innovative marketing to ensure your property reaches its ideal audience and secures the best possible sale price. We handle every aspect, from listing to closing, providing a stress-free experience for our sellers.
-            </p>
-<p class="text-gray-400 text-sm leading-relaxed">
-              On the buying side, we offer comprehensive property purchasing services that include identifying potential homes, arranging viewings, and negotiating deals. Our dedicated team finds a home matching your lifestyle and budget.
-            </p>
-<div class="pt-2">
-<a class="inline-flex items-center gap-2 text-sm font-semibold tracking-wide text-gold-400 hover:text-gold-300 border-b border-gold-500/50 pb-1 hover:border-gold-400 transition" href="#contact">
-                Consult with our Florida Specialists →
-              </a>
-</div>
-</div>
-<!-- Right Column Service Cards -->
-<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
-<!-- Card 1: Selling -->
-<div class="group relative rounded-xl p-8 bg-noir-850 border border-gold-500/20 hover:border-gold-500/60 transition-all duration-300 hover:-translate-y-1.5 shadow-xl">
-<div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-6 group-hover:bg-gold-500 group-hover:text-noir-950 transition">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
-</div>
-<span class="text-xs uppercase text-gold-400 font-semibold tracking-wider block mb-1">Real Estate</span>
-<h3 class="font-editorial text-xl font-bold text-white mb-2">Selling Properties</h3>
-<p class="text-xs text-gray-400 leading-relaxed">
-                Strategic aerial marketing, global luxury syndication, and private client bidding to maximize high net return for Florida homes.
-              </p>
-</div>
-<!-- Card 2: Buying -->
-<div class="group relative rounded-xl p-8 bg-noir-850 border border-gold-500/20 hover:border-gold-500/60 transition-all duration-300 hover:-translate-y-1.5 shadow-xl">
-<div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-6 group-hover:bg-gold-500 group-hover:text-noir-950 transition">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
-</div>
-<span class="text-xs uppercase text-gold-400 font-semibold tracking-wider block mb-1">Buyer Representation</span>
-<h3 class="font-editorial text-xl font-bold text-white mb-2">Buying Properties</h3>
-<p class="text-xs text-gray-400 leading-relaxed">
-                Access exclusive off-market listings, pre-construction estates, and prime Central Florida farm acreage matching your specific goals.
-              </p>
-</div>
-<!-- Card 3: Commercial & Residential -->
-<div class="group relative rounded-xl p-8 bg-noir-850 border border-gold-500/20 hover:border-gold-500/60 transition-all duration-300 hover:-translate-y-1.5 shadow-xl">
-<div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-6 group-hover:bg-gold-500 group-hover:text-noir-950 transition">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
-</div>
-<span class="text-xs uppercase text-gold-400 font-semibold tracking-wider block mb-1">Real Estate</span>
-<h3 class="font-editorial text-xl font-bold text-white mb-2">Commercial &amp; Residential</h3>
-<p class="text-xs text-gray-400 leading-relaxed">
-                Expert portfolio advisory encompassing equine facilities, ranches, residential luxury homes, and multi-tenant investments.
-              </p>
-</div>
-<!-- Card 4: Consultation -->
-<div class="group relative rounded-xl p-8 bg-noir-850 border border-gold-500/20 hover:border-gold-500/60 transition-all duration-300 hover:-translate-y-1.5 shadow-xl">
-<div class="w-12 h-12 rounded-lg bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 mb-6 group-hover:bg-gold-500 group-hover:text-noir-950 transition">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path></svg>
-</div>
-<span class="text-xs uppercase text-gold-400 font-semibold tracking-wider block mb-1">Support</span>
-<h3 class="font-editorial text-xl font-bold text-white mb-2">Property Consultation</h3>
-<p class="text-xs text-gray-400 leading-relaxed">
-                Comprehensive zoning analysis, agricultural valuation, auction preparation, and seamless closing orchestration.
-              </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- END: ServicesSection -->
-<!-- BEGIN: LatestPropertiesSection -->
-<section class="py-24 bg-noir-950 relative" id="properties">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<!-- Section Header -->
-<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6 border-b border-gold-500/15 pb-8">
-<div>
-<span class="text-xs uppercase tracking-[0.25em] text-gold-500 font-bold block mb-2">Recently Listed</span>
-<h2 class="font-editorial text-3xl sm:text-5xl font-bold text-white">
-              Latest Properties to Hit the Market
-            </h2>
-<p class="text-sm text-gray-400 mt-2 max-w-2xl font-light">
-              Central Florida real estate market continually evolves, offering a broad spectrum of newly listed properties that accommodate diverse tastes and budgets.
-            </p>
-</div>
-<a class="inline-flex items-center px-6 py-3 rounded-lg border border-gold-500/40 text-xs uppercase tracking-widest text-gold-400 hover:bg-gold-500 hover:text-noir-950 transition font-bold self-start md:self-auto" href="#contact">
-            View All MLS Listings
-          </a>
-</div>
-<!-- Luxury Properties Grid -->
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Property 1 -->
-<article class="group rounded-2xl overflow-hidden bg-noir-900 border border-noir-700/80 hover:border-gold-500/50 transition-all duration-500 shadow-2xl flex flex-col">
-<div class="relative h-64 overflow-hidden">
-<img alt="Florida Coastal Luxury Waterfront Compound" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1Xlhsn2FZV-nhxOrlzbdJ0p9ceQg8YyHdGmucRpcUtRQnNWtNEZ2BjRqpoNq2tzPXr67GRkq_Lk1jinExSanIcx_dnY54jo5k9W0XvgS17SaHULmFAjynxzWgoDWycswFvjCQnqFlSC2L7zH1pa9OtrnL0R96IHHGla6vRaPdmU6bNDXVr3FWmFApk3rhCa8q2s3YyK9UppD4G-mlybaHUB-fCERhcWs6hNHRHFXkDUtg"/>
-<span class="absolute top-4 left-4 bg-emerald-950/80 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
-                Active Listing
-              </span>
-<div class="absolute bottom-4 right-4 bg-noir-950/80 backdrop-blur-md px-3 py-1 rounded text-white font-mono text-xs">
-                Private Yacht Dock
-              </div>
-</div>
-<div class="p-6 flex-1 flex flex-col justify-between">
-<div>
-<div class="text-2xl font-bold text-white font-serif tracking-tight mb-1">$23,850,000</div>
-<h3 class="text-lg font-semibold text-gray-200 group-hover:text-gold-400 transition-colors">Sand Pine Road Compound</h3>
-<p class="text-xs text-gray-400 mb-4">Davenport / Central Florida Corridor</p>
-<div class="grid grid-cols-3 gap-2 py-3 border-y border-noir-800 text-xs text-gray-300">
-<div><strong class="text-white block font-serif">8</strong> Beds</div>
-<div><strong class="text-white block font-serif">10</strong> Baths</div>
-<div><strong class="text-white block font-serif">14,200</strong> Sq Ft</div>
-</div>
-</div>
-<div class="mt-5 flex items-center justify-between pt-2">
-<span class="text-xs text-gold-400 font-medium">Boutique Luxury Portfolio</span>
-<a class="text-xs font-semibold uppercase tracking-wider text-gray-300 hover:text-white group-hover:underline" href="#contact">Schedule Tour →</a>
-</div>
-</div>
 </article>
-<!-- Property 2 -->
-<article class="group rounded-2xl overflow-hidden bg-noir-900 border border-noir-700/80 hover:border-gold-500/50 transition-all duration-500 shadow-2xl flex flex-col">
-<div class="relative h-64 overflow-hidden">
-<img alt="Sarasota Bay Modern Architectural Waterfront Estate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1Ui9nhzzwIF9M1_6jAsFEDOvkolEs9M7rHnX0FQ49MHWqle4-RkXxVFzaQwOTU4lgzXhP8FycZJEXC3fnf9DyBw_MjUHB373lOykKeKYP3HyRlHnQuGlzvGeODi5hrb4Fb6QX5k-Vuxdlx8TA5AB6RdRD9DJsKBzSpnl9YZl-Y9nWzABU-zUexa08UX0598jcB-57FVHDDhOTHnqiIDjjgTa2l0zK9YNcprY22q4Y7G_A"/>
-<span class="absolute top-4 left-4 bg-emerald-950/80 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
-                Active Listing
-              </span>
-<div class="absolute bottom-4 right-4 bg-noir-950/80 backdrop-blur-md px-3 py-1 rounded text-white font-mono text-xs">
-                Waterfront
-              </div>
-</div>
-<div class="p-6 flex-1 flex flex-col justify-between">
+<!-- PROPERTY CARD 2: Sarasota Bayfront -->
+<article class="group bg-surface-container rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:-translate-y-1">
+<div class="relative w-full h-64 overflow-hidden rounded-t-xl bg-surface-container-highest"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTjutjYGcITZUIS3RJ1hIAzmARBiAHDjdt0uEO5jKa90U6aBu9oQLy2TIAwUDwQ-nNY6JWTc5Z6SkMKUV-PifswE1b2NNeIEu5jA3PkIrpJCXoRQ7jZZ_sEYcb9gRF3kaYxheR4Q3WF0d70boLsTYg61PN_utxzN9pYHN-OqvjXaQSYPN3g5JdBYxsg5153N7rYl9zHjQJZ4QxRd7SjObn585U_lNfek8VRKisTJlM" alt="The Hillview Bayfront Manor - Luxury Sarasota Waterfront Estate" class="w-full h-64 object-cover rounded-t-xl transition duration-700 ease-out group-hover:scale-105"><div class="absolute top-4 left-4 flex gap-2"><span class="px-3 py-1 bg-surface-dim/80 backdrop-blur-md rounded text-primary font-label-md text-label-md uppercase tracking-wider">Active</span><span class="px-3 py-1 bg-surface-dim/80 backdrop-blur-md rounded text-on-surface font-label-md text-label-md uppercase tracking-wider">Bayfront Deepwater</span></div><div class="absolute bottom-4 right-4 bg-surface-dim/90 backdrop-blur-md px-3.5 py-1.5 rounded"><span class="font-price-display text-price-display text-primary">$14,950,000</span></div></div>
+<div class="p-6 lg:p-8 flex flex-col justify-between">
 <div>
-<div class="text-2xl font-bold text-white font-serif tracking-tight mb-1">$14,950,000</div>
-<h3 class="text-lg font-semibold text-gray-200 group-hover:text-gold-400 transition-colors">1042 Hillview Drive</h3>
-<p class="text-xs text-gray-400 mb-4">Sarasota, FL 34239</p>
-<div class="grid grid-cols-3 gap-2 py-3 border-y border-noir-800 text-xs text-gray-300">
-<div><strong class="text-white block font-serif">6</strong> Beds</div>
-<div><strong class="text-white block font-serif">7.5</strong> Baths</div>
-<div><strong class="text-white block font-serif">8,950</strong> Sq Ft</div>
-</div>
-</div>
-<div class="mt-5 flex items-center justify-between pt-2">
-<span class="text-xs text-gold-400 font-medium">Glass Pavilion &amp; Spa Pool</span>
-<a class="text-xs font-semibold uppercase tracking-wider text-gray-300 hover:text-white group-hover:underline" href="#contact">Schedule Tour →</a>
-</div>
-</div>
-</article>
-<!-- Property 3 -->
-<article class="group rounded-2xl overflow-hidden bg-noir-900 border border-noir-700/80 hover:border-gold-500/50 transition-all duration-500 shadow-2xl flex flex-col">
-<div class="relative h-64 overflow-hidden">
-<img alt="Luxury Modern Estate Exterior with Circular Driveway" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AEtjO1Xkf6McKMW0R_JUQKbZiNfJI9WMlnz9ykU5kXvgATuH-0rQdNUSlA4p6rgf4175EdHffFboDAXGfxAKuGSmOhSrCdxlfiGfVBzvZ4OYskE-mUhIBnd6SaToIr2XEcR1PJUmioLpm4sUOKFxsNn5puLcl5Bdn3iSmQTyIDL7vzEF_UoYTsbI68TxIDOFm_Q2aOCrinM9-A1Gr3hH8QahvieKGpAYBUw49_IYaveG6Ub3"/>
-<span class="absolute top-4 left-4 bg-emerald-950/80 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
-                Active Listing
-              </span>
-<div class="absolute bottom-4 right-4 bg-noir-950/80 backdrop-blur-md px-3 py-1 rounded text-white font-mono text-xs">
-                Private Grounds
-              </div>
-</div>
-<div class="p-6 flex-1 flex flex-col justify-between">
-<div>
-<div class="text-2xl font-bold text-white font-serif tracking-tight mb-1">$10,890,000</div>
-<h3 class="text-lg font-semibold text-gray-200 group-hover:text-gold-400 transition-colors">4714 Roberts Point Circle</h3>
-<p class="text-xs text-gray-400 mb-4">Sarasota / Gulf Coast</p>
-<div class="grid grid-cols-3 gap-2 py-3 border-y border-noir-800 text-xs text-gray-300">
-<div><strong class="text-white block font-serif">5</strong> Beds</div>
-<div><strong class="text-white block font-serif">6</strong> Baths</div>
-<div><strong class="text-white block font-serif">7,400</strong> Sq Ft</div>
-</div>
-</div>
-<div class="mt-5 flex items-center justify-between pt-2">
-<span class="text-xs text-gold-400 font-medium">Sunset View Grounds</span>
-<a class="text-xs font-semibold uppercase tracking-wider text-gray-300 hover:text-white group-hover:underline" href="#contact">Schedule Tour →</a>
-</div>
-</div>
-</article>
-</div>
-<div class="text-center mt-12">
-<button class="px-8 py-3.5 rounded-full border border-gold-500/40 text-gold-300 hover:bg-gold-500 hover:text-noir-950 text-xs font-bold uppercase tracking-widest transition duration-300 shadow-lg">
-            See All Results &amp; Exclusive Listings
-          </button>
-</div>
-</div>
-</section>
-<!-- END: LatestPropertiesSection -->
-<!-- BEGIN: FounderSpotlightSection -->
-<section class="py-24 bg-noir-900 border-t border-noir-800 relative overflow-hidden" id="about">
-<!-- Glow Decor -->
-<div class="absolute -top-32 -right-32 w-96 h-96 bg-gold-500/5 rounded-full blur-3xl pointer-events-none"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-<!-- Founder Bio & Story -->
-<div class="lg:col-span-6 space-y-6">
-<span class="text-xs uppercase font-bold tracking-[0.25em] text-gold-500">About All Florida Homes Realty</span>
-<h2 class="font-editorial text-3xl sm:text-5xl font-bold text-white leading-tight">
-              Your Partners in Real Estate: <br/>
-<span class="gold-gradient-text italic">From Start to Finish</span>
-</h2>
-<div class="w-20 h-1 bg-gold-500"></div>
-<blockquote class="italic text-gray-300 border-l-2 border-gold-500 pl-4 text-base font-light">
-              "All Florida Homes Realty is outstanding! The team will go above and beyond to make you happy. We have now bought &amp; sold with them and both processes were seamless. Nichole is very experienced, hard working, and kind. I will always recommend using her!"
-            </blockquote>
-<p class="text-gray-300 text-sm leading-relaxed">
-              At All Florida Homes Realty, our process is designed with your need in mind, from initial consultation to closing. Our team, a blend of experienced agents and real estate experts, is committed to providing personalized services, ensuring your real estate journey is smooth and successful.
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[15px] text-primary">location_on</span>
+              1042 Hillview Drive · Sarasota Bay
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">
+              The Hillview Bayfront Manor
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-6">
+              Prime Sarasota deepwater frontage engineered for mega-yacht docking, direct intercoastal navigation, expansive stone loggias, and sunset terraces.
             </p>
-<p class="text-gray-400 text-sm leading-relaxed">
-              Nichole Roberts, the driving force behind All Florida Homes Realty, brings extensive experience as a broker since 2018 and a licensed real estate agent since 2005. Specializing in residential, new construction, investment properties, and farm acreage.
-            </p>
-<div class="pt-2 flex flex-wrap gap-4">
-<a class="px-6 py-3 rounded-full bg-gold-500 text-noir-950 font-bold text-xs uppercase tracking-wider hover:bg-gold-400 transition shadow-lg shadow-gold-500/10" href="#contact">
-                Meet Our Team
-              </a>
-<a class="px-6 py-3 rounded-full border border-gray-700 text-gray-300 hover:text-white hover:border-gold-400 font-bold text-xs uppercase tracking-wider transition" href="tel:3527895063">
-                Direct: (352) 789-5063
-              </a>
 </div>
-</div>
-<!-- Founder Photography & Client Trust Photos -->
-<div class="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4 items-center">
-<!-- Nichole Roberts Headshot Card -->
-<div class="relative group rounded-2xl overflow-hidden border border-gold-500/30 glass-card shadow-2xl">
-<img alt="Nichole Roberts - Principal Broker &amp; Founder All Florida Homes Realty" class="w-full h-80 object-cover object-top group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0C3yigR_ZVXVQUHCpKJcRFa-j1ubTrLUMfZN4y86lA1QxM1aad1HMCZBCuz9XX82hTXNkX_27laYt3_kH5cz6IqKZtZZXNDO0h_5zy1uwrwfZs7WJkKRH9FRIJGzJogBCptvjbR1ZZJCuuo4VIlZU-XV68onmuPGv4MLljrT4aV0ggZNzBfnSaBk14YiP50bAcIiwEDvsQd4JIF1leIEPxWu7VSYCzr4Nnvt1tSTc02MlqPNSYCkWSw"/>
-<div class="absolute bottom-0 inset-x-0 p-4 bg-gradient-to-t from-noir-950 via-noir-950/80 to-transparent">
-<h4 class="font-editorial text-lg font-bold text-white">Nichole Roberts</h4>
-<p class="text-xs text-gold-400">Principal Broker / Founder</p>
-<p class="text-[11px] text-gray-400">Licensed Real Estate Agent Since 2005</p>
-</div>
-</div>
-<!-- Closing Photo Card (Authentic from DataStore) -->
-<div class="space-y-4">
-<div class="relative group rounded-2xl overflow-hidden border border-gold-500/20 glass-card shadow-xl">
-<img alt="Happy Florida Clients at Closing Celebration with All Florida Homes Realty" class="w-full h-56 object-cover object-top group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3t6lUX30j7wveabmTX2o6p6R5OgWA5Q2WmK4m0N6pj26SDruRSh-3ehLOdq7uELoU65Td5Jqat5P4uu_wMzSSFdKQSOHS-JoXKyRBy0v4JJqKqnNZjt6PXnP1x7O2ndKXbVCzli6YxhldgDRJ6xH-MXbOgkenIO1GQIjebci5LjpJ3OpPbr1gEWNi4r6E9lEDLeavdw9js0p-g0L2qRfTRiI4BUvN-juWoCtybkhszmfSZiKQZTzPwQ"/>
-<div class="p-3 bg-noir-950/90 text-xs text-gray-300">
-<span class="text-gold-400 font-semibold block">Client Success Story</span>
-                  Keys delivered with celebration gift baskets and 5-star closing support.
-                </div>
-</div>
-<!-- Quick Accreditations Box -->
-<div class="p-4 rounded-xl bg-noir-850 border border-gold-500/20 flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center shrink-0">
-                  ★
-                </div>
-<div>
-<h5 class="text-xs font-bold text-white">Top 20 Agent 2026</h5>
-<p class="text-[11px] text-gray-400">Recognized Excellence in Marion &amp; Alachua Counties</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-<!-- Metrics Banner -->
-<div class="mt-16 pt-10 border-t border-noir-800 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-<div class="p-4 rounded-xl bg-noir-950/50 border border-noir-800">
-<div class="font-editorial text-4xl font-bold text-white mb-1">100%</div>
-<div class="text-xs uppercase tracking-wider text-gray-400 font-medium">5-Star Client Reviews</div>
-</div>
-<div class="p-4 rounded-xl bg-noir-950/50 border border-noir-800">
-<div class="font-editorial text-4xl font-bold text-white mb-1">24/7</div>
-<div class="text-xs uppercase tracking-wider text-gray-400 font-medium">Direct Broker Availability</div>
-</div>
-<div class="p-4 rounded-xl bg-noir-950/50 border border-noir-800">
-<div class="font-editorial text-4xl font-bold text-gold-400 mb-1">99+</div>
-<div class="text-xs uppercase tracking-wider text-gray-400 font-medium">Florida Properties Sold</div>
-</div>
-<div class="p-4 rounded-xl bg-noir-950/50 border border-noir-800">
-<div class="font-editorial text-4xl font-bold text-white mb-1">20+</div>
-<div class="text-xs uppercase tracking-wider text-gray-400 font-medium">Years in Central Florida</div>
-</div>
-</div>
-</div>
-</section>
-<!-- END: FounderSpotlightSection -->
-<!-- BEGIN: FarmPropertiesSection -->
-<section class="py-24 bg-noir-950 relative" id="farms">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<!-- Header -->
-<div class="mb-12">
-<span class="text-xs uppercase tracking-[0.25em] text-gold-500 font-bold block mb-2">Central Florida Agricultural &amp; Auction Opportunities</span>
-<h2 class="font-editorial text-3xl sm:text-5xl font-bold text-white leading-tight">
-            Farm Properties &amp; Expansive Acreage Available
-          </h2>
-<p class="text-sm sm:text-base text-gray-400 mt-3 max-w-3xl font-light">
-            All Florida Homes Realty proudly offers real array of exquisite farms located in the heart of Central Florida. Whether you're an experienced farmer seeking to expand your operations or a newcomer looking to embrace a rural lifestyle, explore fertile soil, pristine paddocks, and premier equine facilities.
-          </p>
-</div>
-<!-- Table / List Layout of Farm Auctions -->
-<div class="space-y-4">
-<!-- Farm Auction 1 -->
-<div class="group glass-card rounded-xl p-5 hover:border-gold-500/60 transition-all duration-300 flex flex-col md:flex-row items-center justify-between gap-6">
-<div class="flex items-center gap-5 w-full md:w-auto">
-<div class="w-20 h-20 rounded-lg bg-noir-800 shrink-0 overflow-hidden border border-noir-700">
-<img alt="Archer Farm Land" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Xkf6McKMW0R_JUQKbZiNfJI9WMlnz9ykU5kXvgATuH-0rQdNUSlA4p6rgf4175EdHffFboDAXGfxAKuGSmOhSrCdxlfiGfVBzvZ4OYskE-mUhIBnd6SaToIr2XEcR1PJUmioLpm4sUOKFxsNn5puLcl5Bdn3iSmQTyIDL7vzEF_UoYTsbI68TxIDOFm_Q2aOCrinM9-A1Gr3hH8QahvieKGpAYBUw49_IYaveG6Ub3"/>
-</div>
-<div>
+<!-- Specs Divider Ribbon -->
+<div class="pt-4 flex flex-wrap items-center justify-between gap-4 bg-surface-container-low px-4 py-3 rounded-lg mb-6">
 <div class="flex items-center gap-2">
-<span class="text-xs font-bold text-emerald-400 uppercase tracking-wider bg-emerald-950/80 px-2 py-0.5 rounded">Auction Opportunity</span>
-<span class="text-xs text-gray-400">Alachua County</span>
+<span class="material-symbols-outlined text-primary text-[19px]">bed</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">6 Beds</span>
 </div>
-<h3 class="font-editorial text-lg sm:text-xl font-bold text-white mt-1">179th Place Archer, FL 32618</h3>
-<p class="text-xs text-gray-400 max-w-xl mt-1 line-clamp-1">
-                  Auction Property: ON-LINE ABSOLUTE AUCTION, to be sold to the highest bidder. High-and-dry acreage ideal for pastures or estate building.
-                </p>
-</div>
-</div>
-<div class="flex items-center justify-between md:justify-end gap-6 w-full md:w-auto border-t md:border-t-0 pt-3 md:pt-0 border-noir-800">
-<div class="text-right">
-<div class="text-xs uppercase text-gray-400">Starting Bid</div>
-<div class="text-2xl font-mono font-bold text-gold-400">$1,000</div>
-</div>
-<a class="px-5 py-2.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-noir-950 text-xs font-bold uppercase tracking-wider transition whitespace-nowrap" href="#contact">
-                Bid Details
-              </a>
-</div>
-</div>
-<!-- Farm Auction 2 -->
-<div class="group glass-card rounded-xl p-5 hover:border-gold-500/60 transition-all duration-300 flex flex-col md:flex-row items-center justify-between gap-6">
-<div class="flex items-center gap-5 w-full md:w-auto">
-<div class="w-20 h-20 rounded-lg bg-noir-800 shrink-0 overflow-hidden border border-noir-700">
-<img alt="SW 200 Street Archer Property" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Xlhsn2FZV-nhxOrlzbdJ0p9ceQg8YyHdGmucRpcUtRQnNWtNEZ2BjRqpoNq2tzPXr67GRkq_Lk1jinExSanIcx_dnY54jo5k9W0XvgS17SaHULmFAjynxzWgoDWycswFvjCQnqFlSC2L7zH1pa9OtrnL0R96IHHGla6vRaPdmU6bNDXVr3FWmFApk3rhCa8q2s3YyK9UppD4G-mlybaHUB-fCERhcWs6hNHRHFXkDUtg"/>
-</div>
-<div>
+<div class="w-[1px] h-4 bg-surface-variant"></div>
 <div class="flex items-center gap-2">
-<span class="text-xs font-bold text-emerald-400 uppercase tracking-wider bg-emerald-950/80 px-2 py-0.5 rounded">Auction Opportunity</span>
-<span class="text-xs text-gray-400">Archer, FL</span>
+<span class="material-symbols-outlined text-primary text-[19px]">bathtub</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">7.5 Baths</span>
 </div>
-<h3 class="font-editorial text-lg sm:text-xl font-bold text-white mt-1">SW 200 Street Archer, FL 32618</h3>
-<p class="text-xs text-gray-400 max-w-xl mt-1 line-clamp-1">
-                  Prime farm acreage, fenced perimeter with mature live oaks. Excellent equestrian or private ranch foundation.
-                </p>
-</div>
-</div>
-<div class="flex items-center justify-between md:justify-end gap-6 w-full md:w-auto border-t md:border-t-0 pt-3 md:pt-0 border-noir-800">
-<div class="text-right">
-<div class="text-xs uppercase text-gray-400">Starting Bid</div>
-<div class="text-2xl font-mono font-bold text-gold-400">$1,000</div>
-</div>
-<a class="px-5 py-2.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-noir-950 text-xs font-bold uppercase tracking-wider transition whitespace-nowrap" href="#contact">
-                Bid Details
-              </a>
-</div>
-</div>
-<!-- Farm Auction 3 -->
-<div class="group glass-card rounded-xl p-5 hover:border-gold-500/60 transition-all duration-300 flex flex-col md:flex-row items-center justify-between gap-6">
-<div class="flex items-center gap-5 w-full md:w-auto">
-<div class="w-20 h-20 rounded-lg bg-noir-800 shrink-0 overflow-hidden border border-noir-700">
-<img alt="SW 38 Terrace Gainesville Land" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Ui9nhzzwIF9M1_6jAsFEDOvkolEs9M7rHnX0FQ49MHWqle4-RkXxVFzaQwOTU4lgzXhP8FycZJEXC3fnf9DyBw_MjUHB373lOykKeKYP3HyRlHnQuGlzvGeODi5hrb4Fb6QX5k-Vuxdlx8TA5AB6RdRD9DJsKBzSpnl9YZl-Y9nWzABU-zUexa08UX0598jcB-57FVHDDhOTHnqiIDjjgTa2l0zK9YNcprY22q4Y7G_A"/>
-</div>
-<div>
+<div class="w-[1px] h-4 bg-surface-variant"></div>
 <div class="flex items-center gap-2">
-<span class="text-xs font-bold text-gold-400 uppercase tracking-wider bg-gold-950/80 px-2 py-0.5 rounded">Development Parcel</span>
-<span class="text-xs text-gray-400">Gainesville / Alachua</span>
+<span class="material-symbols-outlined text-primary text-[19px]">square_foot</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">9,850 SqFt</span>
 </div>
-<h3 class="font-editorial text-lg sm:text-xl font-bold text-white mt-1">SW 38 Terrace Gainesville, FL 32608</h3>
-<p class="text-xs text-gray-400 max-w-xl mt-1 line-clamp-1">
-                  Parcel 3.41 acres in strong Gainesville corridor. Prime opportunity for private sanctuary or agricultural compound.
-                </p>
-</div>
-</div>
-<div class="flex items-center justify-between md:justify-end gap-6 w-full md:w-auto border-t md:border-t-0 pt-3 md:pt-0 border-noir-800">
-<div class="text-right">
-<div class="text-xs uppercase text-gray-400">Starting Bid</div>
-<div class="text-2xl font-mono font-bold text-gold-400">$1,000</div>
-</div>
-<a class="px-5 py-2.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-noir-950 text-xs font-bold uppercase tracking-wider transition border border-transparent whitespace-nowrap" href="#contact">
-                Bid Details
-              </a>
-</div>
-</div>
-<!-- Farm Auction 4 -->
-<div class="group glass-card rounded-xl p-5 hover:border-gold-500/60 transition-all duration-300 flex flex-col md:flex-row items-center justify-between gap-6">
-<div class="flex items-center gap-5 w-full md:w-auto">
-<div class="w-20 h-20 rounded-lg bg-noir-800 shrink-0 overflow-hidden border border-noir-700">
-<img alt="NW 179 Place Archer" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" src="https://lh3.googleusercontent.com/aida/AEtjO1Xkf6McKMW0R_JUQKbZiNfJI9WMlnz9ykU5kXvgATuH-0rQdNUSlA4p6rgf4175EdHffFboDAXGfxAKuGSmOhSrCdxlfiGfVBzvZ4OYskE-mUhIBnd6SaToIr2XEcR1PJUmioLpm4sUOKFxsNn5puLcl5Bdn3iSmQTyIDL7vzEF_UoYTsbI68TxIDOFm_Q2aOCrinM9-A1Gr3hH8QahvieKGpAYBUw49_IYaveG6Ub3"/>
-</div>
-<div>
+<div class="w-[1px] h-4 bg-surface-variant"></div>
 <div class="flex items-center gap-2">
-<span class="text-xs font-bold text-emerald-400 uppercase tracking-wider bg-emerald-950/80 px-2 py-0.5 rounded">Auction Opportunity</span>
-<span class="text-xs text-gray-400">Archer Country Living</span>
+<span class="material-symbols-outlined text-primary text-[19px]">anchor</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">140ft Dock</span>
 </div>
-<h3 class="font-editorial text-lg sm:text-xl font-bold text-white mt-1">11937 SW 179 Place Archer, FL 32618</h3>
-<p class="text-xs text-gray-400 max-w-xl mt-1 line-clamp-1">
-                  Pristine homesite located off graded country road with majestic live oak canopy.
-                </p>
-</div>
-</div>
-<div class="flex items-center justify-between md:justify-end gap-6 w-full md:w-auto border-t md:border-t-0 pt-3 md:pt-0 border-noir-800">
-<div class="text-right">
-<div class="text-xs uppercase text-gray-400">Starting Bid</div>
-<div class="text-2xl font-mono font-bold text-gold-400">$1,000</div>
-</div>
-<a class="px-5 py-2.5 rounded-lg bg-gold-500 hover:bg-gold-400 text-noir-950 text-xs font-bold uppercase tracking-wider transition whitespace-nowrap" href="#contact">
-                Bid Details
-              </a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- END: FarmPropertiesSection -->
-<!-- BEGIN: InteractiveMapSection -->
-<section class="py-24 bg-noir-900 border-t border-noir-800 relative" id="featured">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<!-- Header -->
-<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-<div>
-<span class="text-xs uppercase tracking-[0.25em] text-gold-500 font-bold block mb-2">Central Florida &amp; Beyond</span>
-<h2 class="font-editorial text-3xl sm:text-5xl font-bold text-white">
-              Florida Listings &amp; Interactive Search
-            </h2>
-<p class="text-sm text-gray-400 mt-2">
-              Explore available properties throughout Marion, Alachua, and Sarasota counties.
-            </p>
 </div>
 <div class="flex items-center gap-3">
-<button class="px-4 py-2 rounded-lg bg-noir-800 border border-noir-700 text-xs font-semibold hover:border-gold-500 transition text-gray-200">
-              Grid View
-            </button>
-<button class="px-4 py-2 rounded-lg bg-gold-500 text-noir-950 text-xs font-bold transition">
-              Map View
-            </button>
+<a class="flex-1 py-3 text-center rounded bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-widest hover:bg-secondary transition-all" href="#contact">Schedule Showing</a>
+<button class="px-5 py-3 rounded bg-surface-container-high text-on-surface hover:text-primary font-label-lg text-label-lg uppercase tracking-wider transition-all flex items-center justify-center" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+<span class="material-symbols-outlined text-[18px]">videocam</span>
+</button>
 </div>
 </div>
-<!-- Simulated Luxury Map Explorer Graphic -->
-<div class="relative rounded-2xl overflow-hidden border border-gold-500/20 shadow-2xl bg-noir-950 mb-10 h-80 sm:h-96 flex items-center justify-center">
-<!-- Stylized map background pattern -->
-<div class="absolute inset-0 opacity-25 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:24px_24px]"></div>
-<!-- Map Overlay Pins -->
-<div class="relative z-10 text-center max-w-md p-6 bg-noir-900/90 backdrop-blur-md rounded-2xl border border-gold-500/30">
-<div class="w-12 h-12 rounded-full bg-gold-500/20 border border-gold-500/50 flex items-center justify-center text-gold-400 mx-auto mb-3">
-<svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</div>
-<h3 class="font-editorial text-xl font-bold text-white mb-1">Central Florida MLS Live Feed</h3>
-<p class="text-xs text-gray-400 mb-4 leading-relaxed">
-              Ocala Horse Capital of the World • Gainesville Tech Corridor • Archer Acreage • Sarasota Waterfront
+</article>
+<!-- PROPERTY CARD 3: Roberts Point Circle -->
+<article class="group bg-surface-container rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:-translate-y-1">
+<div class="relative w-full h-64 overflow-hidden rounded-t-xl bg-surface-container-highest"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgh8VhIvJxhF7MwiZqT-EXNbgnGctZzLnFHBTYPE2TZ_IrI77EYUavjl99XgMmxZuMpaCFme8pW3CznHnG7YMDtNTNSHulfJ7IGEbVtSZvpZxvVM4w-4fymnI_CVQE0jGEKWshoGq6H-VuGKglFLZMm8skVYGxWSB7Y2iYflNv-6lbhGCsM4BmMu_wD_5RoHo4w-FZLTjew2Vip__4d_F74GbrlfKL9g6Txa8_FCbK" alt="The Roberts Point Coastal Villa" class="w-full h-64 object-cover rounded-t-xl transition-transform duration-700 ease-out group-hover:scale-105"><div class="absolute top-4 left-4 flex gap-2"><span class="px-3 py-1 bg-surface-dim/80 backdrop-blur-md rounded text-primary font-label-md text-label-md uppercase tracking-wider">Active</span><span class="px-3 py-1 bg-surface-dim/80 backdrop-blur-md rounded text-on-surface font-label-md text-label-md uppercase tracking-wider">Siesta Key Sanctuary</span></div><div class="absolute bottom-4 right-4 bg-surface-dim/90 backdrop-blur-md px-3.5 py-1.5 rounded"><span class="font-price-display text-price-display text-primary">$10,890,000</span></div></div>
+<div class="p-6 lg:p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[15px] text-primary">location_on</span>
+              4714 Roberts Point Circle · Siesta Key, FL
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">
+              The Roberts Point Coastal Villa
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-6">
+              Tropical Mediterranean villa on coveted barrier island acreage, panoramic water views, enclosed motor court, and turnkey luxury interiors.
             </p>
-<a class="px-5 py-2.5 rounded-full bg-gold-500 hover:bg-gold-400 text-noir-950 font-bold text-xs uppercase tracking-wider transition inline-block" href="#contact">
-              Open Interactive Florida Map
-            </a>
 </div>
-<!-- Decorative simulated pins -->
-<div class="absolute top-1/4 left-1/4 animate-bounce hidden sm:flex items-center gap-1 bg-noir-900 border border-gold-500/60 px-2 py-1 rounded text-[11px] text-gold-300 font-mono shadow">
-            📍 Ocala Estates ($950k)
-          </div>
-<div class="absolute bottom-1/3 right-1/4 animate-pulse hidden sm:flex items-center gap-1 bg-noir-900 border border-gold-500/60 px-2 py-1 rounded text-[11px] text-gold-300 font-mono shadow">
-            📍 Sarasota Coastal ($14.9M)
-          </div>
+<div class="pt-4 flex flex-wrap items-center justify-between gap-4 bg-surface-container-low px-4 py-3 rounded-lg mb-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[19px]">bed</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">5 Beds</span>
 </div>
-<!-- Featured Row of Listings -->
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-<div class="bg-noir-850 rounded-xl overflow-hidden border border-noir-700/70 hover:border-gold-500/40 transition">
-<img alt="Ocala Highlands Home" class="w-full h-40 object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Xkf6McKMW0R_JUQKbZiNfJI9WMlnz9ykU5kXvgATuH-0rQdNUSlA4p6rgf4175EdHffFboDAXGfxAKuGSmOhSrCdxlfiGfVBzvZ4OYskE-mUhIBnd6SaToIr2XEcR1PJUmioLpm4sUOKFxsNn5puLcl5Bdn3iSmQTyIDL7vzEF_UoYTsbI68TxIDOFm_Q2aOCrinM9-A1Gr3hH8QahvieKGpAYBUw49_IYaveG6Ub3"/>
-<div class="p-4">
-<div class="text-lg font-bold text-white font-serif">$950,000</div>
-<h4 class="text-xs font-semibold text-gray-200 mt-1 truncate">7817 NE 2ND STREET</h4>
-<p class="text-[11px] text-gray-400">OCALA, FL 34470</p>
-<div class="mt-3 pt-2 border-t border-noir-800 text-[11px] text-gray-400 flex justify-between">
-<span>4 Beds</span>
-<span>3 Baths</span>
-<span>3,120 Sq Ft</span>
+<div class="w-[1px] h-4 bg-surface-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[19px]">bathtub</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">6 Baths</span>
+</div>
+<div class="w-[1px] h-4 bg-surface-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[19px]">square_foot</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">7,640 SqFt</span>
+</div>
+<div class="w-[1px] h-4 bg-surface-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[19px]">pool</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Resort Pool</span>
 </div>
 </div>
-</div>
-<div class="bg-noir-850 rounded-xl overflow-hidden border border-noir-700/70 hover:border-gold-500/40 transition">
-<img alt="NW 107th Street Ocala" class="w-full h-40 object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Xlhsn2FZV-nhxOrlzbdJ0p9ceQg8YyHdGmucRpcUtRQnNWtNEZ2BjRqpoNq2tzPXr67GRkq_Lk1jinExSanIcx_dnY54jo5k9W0XvgS17SaHULmFAjynxzWgoDWycswFvjCQnqFlSC2L7zH1pa9OtrnL0R96IHHGla6vRaPdmU6bNDXVr3FWmFApk3rhCa8q2s3YyK9UppD4G-mlybaHUB-fCERhcWs6hNHRHFXkDUtg"/>
-<div class="p-4">
-<div class="text-lg font-bold text-white font-serif">$950,000</div>
-<h4 class="text-xs font-semibold text-gray-200 mt-1 truncate">NW 107TH STREET</h4>
-<p class="text-[11px] text-gray-400">OCALA, FL 34471</p>
-<div class="mt-3 pt-2 border-t border-noir-800 text-[11px] text-gray-400 flex justify-between">
-<span>3 Beds</span>
-<span>2.5 Baths</span>
-<span>2,850 Sq Ft</span>
+<div class="flex items-center gap-3">
+<a class="flex-1 py-3 text-center rounded bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-widest hover:bg-secondary transition-all" href="#contact">Schedule Showing</a>
+<button class="px-5 py-3 rounded bg-surface-container-high text-on-surface hover:text-primary font-label-lg text-label-lg uppercase tracking-wider transition-all flex items-center justify-center" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+<span class="material-symbols-outlined text-[18px]">photo_camera</span>
+</button>
 </div>
 </div>
+</article>
+<!-- PROPERTY CARD 4: Marion County Equestrian Grounds -->
+<article class="group bg-surface-container rounded-xl overflow-hidden shadow-xl transition-all duration-500 hover:-translate-y-1">
+<div class="relative w-full h-64 overflow-hidden rounded-t-xl bg-surface-container-highest"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMM0f46SrNfsQNPxseP1QQGfrl3Ow4xvSmi6X13VxTIOCnu-KiZYCAlIEw6iGji1OfIf9t3Uf5gQfvHkCNRtIlM-V3zBGO7CLTzqVfcbvTf-oxa8Cyr_AfMOf3n-KCGpadtlHnVgyEbj67WuK_auBMaQdutBgd5ZoKHsqSLBqIM2zTsrLEiSdovz7uvpS2nquHZIZB5YFAu5trxUmJjED7ze2oMjOabrhc3uulPsPd" alt="Marion Equestrian Grounds &amp; Ranch" class="w-full h-64 object-cover rounded-t-xl transition-transform duration-700 ease-out group-hover:scale-105"><div class="absolute top-4 left-4 flex gap-2"><span class="px-3 py-1 bg-surface-dim/80 backdrop-blur-md rounded text-primary font-label-md text-label-md uppercase tracking-wider">Active</span><span class="px-3 py-1 bg-surface-dim/80 backdrop-blur-md rounded text-on-surface font-label-md text-label-md uppercase tracking-wider">World Equestrian Center Corridor</span></div><div class="absolute bottom-4 right-4 bg-surface-dim/90 backdrop-blur-md px-3.5 py-1.5 rounded"><span class="font-price-display text-price-display text-primary">$4,750,000</span></div></div>
+<div class="p-6 lg:p-8 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-md text-label-md uppercase tracking-wider mb-1">
+<span class="material-symbols-outlined text-[15px] text-primary">location_on</span>
+              Marion County · Ocala Horse Country
+            </div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">
+              Marion Equestrian Grounds &amp; Ranch
+            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2 mb-6">
+              Turnkey equestrian facility comprising 18 center-aisle stalls, regulation covered dressage arena, manager's residence, and emerald lush paddocks.
+            </p>
 </div>
-<div class="bg-noir-850 rounded-xl overflow-hidden border border-noir-700/70 hover:border-gold-500/40 transition">
-<img alt="SW 13th Terrace Gainesville" class="w-full h-40 object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Ui9nhzzwIF9M1_6jAsFEDOvkolEs9M7rHnX0FQ49MHWqle4-RkXxVFzaQwOTU4lgzXhP8FycZJEXC3fnf9DyBw_MjUHB373lOykKeKYP3HyRlHnQuGlzvGeODi5hrb4Fb6QX5k-Vuxdlx8TA5AB6RdRD9DJsKBzSpnl9YZl-Y9nWzABU-zUexa08UX0598jcB-57FVHDDhOTHnqiIDjjgTa2l0zK9YNcprY22q4Y7G_A"/>
-<div class="p-4">
-<div class="text-lg font-bold text-white font-serif">$1,249,000</div>
-<h4 class="text-xs font-semibold text-gray-200 mt-1 truncate">4015 SW 13TH TER</h4>
-<p class="text-[11px] text-gray-400">GAINESVILLE, FL 32608</p>
-<div class="mt-3 pt-2 border-t border-noir-800 text-[11px] text-gray-400 flex justify-between">
-<span>5 Beds</span>
-<span>4 Baths</span>
-<span>4,100 Sq Ft</span>
+<div class="pt-4 flex flex-wrap items-center justify-between gap-4 bg-surface-container-low px-4 py-3 rounded-lg mb-6">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[19px]">fence</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">18 Stalls</span>
+</div>
+<div class="w-[1px] h-4 bg-surface-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[19px]">bed</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">4 Beds Manor</span>
+</div>
+<div class="w-[1px] h-4 bg-surface-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[19px]">square_foot</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">5,200 SqFt</span>
+</div>
+<div class="w-[1px] h-4 bg-surface-variant"></div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[19px]">landscape</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">24.50 Acres</span>
 </div>
 </div>
-</div>
-<div class="bg-noir-850 rounded-xl overflow-hidden border border-noir-700/70 hover:border-gold-500/40 transition">
-<img alt="Newberry Road Acreage" class="w-full h-40 object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1Xkf6McKMW0R_JUQKbZiNfJI9WMlnz9ykU5kXvgATuH-0rQdNUSlA4p6rgf4175EdHffFboDAXGfxAKuGSmOhSrCdxlfiGfVBzvZ4OYskE-mUhIBnd6SaToIr2XEcR1PJUmioLpm4sUOKFxsNn5puLcl5Bdn3iSmQTyIDL7vzEF_UoYTsbI68TxIDOFm_Q2aOCrinM9-A1Gr3hH8QahvieKGpAYBUw49_IYaveG6Ub3"/>
-<div class="p-4">
-<div class="text-lg font-bold text-white font-serif">$499,900</div>
-<h4 class="text-xs font-semibold text-gray-200 mt-1 truncate">9114 SW 82ND WAY</h4>
-<p class="text-[11px] text-gray-400">NEWBERRY, FL 32669</p>
-<div class="mt-3 pt-2 border-t border-noir-800 text-[11px] text-gray-400 flex justify-between">
-<span>4 Beds</span>
-<span>3 Baths</span>
-<span>2,400 Sq Ft</span>
+<div class="flex items-center gap-3">
+<a class="flex-1 py-3 text-center rounded bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-widest hover:bg-secondary transition-all" href="#contact">Schedule Showing</a>
+<button class="px-5 py-3 rounded bg-surface-container-high text-on-surface hover:text-primary font-label-lg text-label-lg uppercase tracking-wider transition-all flex items-center justify-center" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+<span class="material-symbols-outlined text-[18px]">description</span>
+</button>
 </div>
 </div>
-</div>
-</div>
+</article>
 </div>
 </section>
-<!-- END: InteractiveMapSection -->
-<!-- BEGIN: TestimonialsSection -->
-<section class="py-24 bg-noir-950 relative" id="reviews">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<!-- Header -->
-<div class="text-center max-w-3xl mx-auto mb-16">
-<span class="text-xs uppercase tracking-[0.25em] text-gold-500 font-bold block mb-2">Why Choose Us</span>
-<h2 class="font-editorial text-3xl sm:text-5xl font-bold text-white">
-            Proven Excellence, Recognized Results
+<!-- ==================== TAILORED BROKERAGE SERVICES ==================== -->
+<section class="w-full bg-surface-container-low py-20 lg:py-28" id="services">
+<div class="max-w-[1440px] mx-auto px-gutter-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-16">
+<div class="max-w-xl">
+<div class="flex items-center gap-space-xs mb-2">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+<span class="font-label-md text-label-md uppercase tracking-[0.22em] text-primary">Capabilities</span>
+</div>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-on-surface">
+            Tailored Brokerage Services
           </h2>
-<p class="text-gray-400 text-sm mt-3 font-light">
-            Our client testimonials verify our professionalism and commitment to exceeding expectations.
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+            Comprehensive real estate advisory structured for high-net-worth families, investors, and generational landowners.
           </p>
 </div>
-<!-- Testimonials 4-column Grid -->
+<a class="inline-flex items-center gap-space-xs font-label-lg text-label-lg uppercase tracking-wider text-primary hover:text-on-surface transition-colors" href="#contact">
+<span class="">Inquire Regarding Representation</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- 4 High-Impact Minimalist Service Cards -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Review 1 -->
-<div class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-gold-500/50 transition duration-300">
+<div class="group bg-surface p-8 rounded-xl transition-all duration-300 hover:bg-surface-container shadow-md flex flex-col justify-between h-full">
 <div>
-<div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
-<p class="text-xs text-gray-300 italic leading-relaxed">
-                "Great! When she showed up, she was late for no showing — the agent Nichole is attentive, fast, and makes transactions effortless."
-              </p>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-[26px]">real_estate_agent</span>
 </div>
-<div class="mt-6 pt-4 border-t border-noir-800">
-<h4 class="text-sm font-bold text-white">Cassandra Buzzard</h4>
-<span class="text-[11px] text-gold-400">Verified Client • Ocala</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">
+              Selling Properties
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Targeted cinematic production, global private client distribution, and bespoke marketing campaigns that protect confidentiality and maximize value.
+            </p>
+</div>
+<div class="mt-8 pt-4 flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-wider">
+<span class="">Global Syndication</span>
+<span class="material-symbols-outlined text-[15px]">chevron_right</span>
 </div>
 </div>
-<!-- Review 2 -->
-<div class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-gold-500/50 transition duration-300">
+<div class="group bg-surface p-8 rounded-xl transition-all duration-300 hover:bg-surface-container shadow-md flex flex-col justify-between h-full">
 <div>
-<div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
-<p class="text-xs text-gray-300 italic leading-relaxed">
-                "Nichole and Christine were an absolute pleasure to work with throughout our Central Florida property search. Very professional and dependable."
-              </p>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-[26px]">key</span>
 </div>
-<div class="mt-6 pt-4 border-t border-noir-800">
-<h4 class="text-sm font-bold text-white">Donna Raney</h4>
-<span class="text-[11px] text-gold-400">Verified Client • Alachua Co.</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">
+              Buyer Representation
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Direct access to off-market equestrian properties, coastal enclaves, and unlisted Florida estates through decades of deeply cultivated local trust.
+            </p>
+</div>
+<div class="mt-8 pt-4 flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-wider">
+<span class="">Private Off-Market Access</span>
+<span class="material-symbols-outlined text-[15px]">chevron_right</span>
 </div>
 </div>
-<!-- Review 3 -->
-<div class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-gold-500/50 transition duration-300">
+<div class="group bg-surface p-8 rounded-xl transition-all duration-300 hover:bg-surface-container shadow-md flex flex-col justify-between h-full">
 <div>
-<div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
-<p class="text-xs text-gray-300 italic leading-relaxed">
-                "Nichole and her staff were both professional and attentive to our new farm purchase. Couldn't have done it without her guidance."
-              </p>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-[26px]">domain</span>
 </div>
-<div class="mt-6 pt-4 border-t border-noir-800">
-<h4 class="text-sm font-bold text-white">Pam Rice</h4>
-<span class="text-[11px] text-gold-400">Verified Buyer • Archer</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">
+              Commercial &amp; Residential
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Strategic procurement of high-yield mixed-use developments, agricultural timber holdings, and executive residential investment portfolios.
+            </p>
+</div>
+<div class="mt-8 pt-4 flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-wider">
+<span class="">Portfolio Advisory</span>
+<span class="material-symbols-outlined text-[15px]">chevron_right</span>
 </div>
 </div>
-<!-- Review 4 -->
-<div class="glass-card rounded-2xl p-6 flex flex-col justify-between hover:border-gold-500/50 transition duration-300">
+<div class="group bg-surface p-8 rounded-xl transition-all duration-300 hover:bg-surface-container shadow-md flex flex-col justify-between h-full">
 <div>
-<div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
-<p class="text-xs text-gray-300 italic leading-relaxed">
-                "Nichole has helped us with 3 homes. Buying 2 and also selling 1 with her. She is our lifelong Florida broker!"
-              </p>
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined text-[26px]">gavel</span>
 </div>
-<div class="mt-6 pt-4 border-t border-noir-800">
-<h4 class="text-sm font-bold text-white">Mrsemptyfield</h4>
-<span class="text-[11px] text-gold-400">Repeat Client • Multi-Property</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-3">
+              Property Consultation
+            </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Absolute real estate auction strategies, comprehensive zoning appraisal, multi-parcel splits, and generational estate transition advisory.
+            </p>
+</div>
+<div class="mt-8 pt-4 flex items-center gap-2 text-primary font-label-md text-label-md uppercase tracking-wider">
+<span class="">Auctions &amp; Zoning</span>
+<span class="material-symbols-outlined text-[15px]">chevron_right</span>
 </div>
 </div>
-</div>
-<!-- Featured Quote Highlight -->
-<div class="mt-16 glass-card rounded-2xl p-8 max-w-3xl mx-auto border border-gold-500/30 text-center">
-<svg class="w-8 h-8 text-gold-500/40 mx-auto mb-3" fill="currentColor" viewbox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"></path></svg>
-<p class="font-editorial text-lg sm:text-xl text-gray-200 italic leading-relaxed">
-            "Nichole's availability was truly remarkable. She was always there when we needed her, ready to offer guidance and support at every step of the way. Her professionalism and genuine care for her clients were evident in every interaction we had."
-          </p>
-<div class="mt-4 text-xs font-semibold text-gold-400 uppercase tracking-widest">— Verified Client Review</div>
 </div>
 </div>
 </section>
-<!-- END: TestimonialsSection -->
-<!-- BEGIN: ContactSection -->
-<section class="py-24 bg-noir-900 border-t border-noir-800 relative" id="contact">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-<!-- Contact Info -->
-<div class="lg:col-span-5 space-y-6">
-<span class="text-xs uppercase font-bold tracking-[0.25em] text-gold-500">Get Started Today</span>
-<h2 class="font-editorial text-3xl sm:text-5xl font-bold text-white leading-tight">
-              Connect With Central Florida's Premier Advisory
-            </h2>
-<div class="w-16 h-1 bg-gold-500"></div>
-<p class="text-gray-300 text-sm leading-relaxed">
-              Discover your perfect Florida home or expansive acreage. Whether buying, selling, or inquiring about upcoming auctions, Nichole Roberts and our dedicated team are ready to guide you.
-            </p>
-<div class="space-y-4 pt-4">
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-noir-800 border border-gold-500/30 flex items-center justify-center text-gold-400">
-<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</div>
+<!-- ==================== FARMS, ACREAGE & AUCTION OPPORTUNITIES ==================== -->
+<section class="w-full max-w-[1440px] mx-auto px-gutter-mobile lg:px-margin py-20 lg:py-28" id="farms">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-12" id="farms-acreage">
 <div>
-<span class="text-[11px] uppercase tracking-wider text-gray-400 block font-semibold">Direct Broker Phone</span>
-<a class="text-base font-bold text-white hover:text-gold-400 transition font-mono" href="tel:3527895063">(352) 789-5063</a>
+<div class="flex items-center gap-space-xs mb-2">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+<span class="font-label-md text-label-md uppercase tracking-[0.22em] text-primary">Unrestricted Land &amp; Bidding</span>
+</div>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-on-surface">
+          Farms, Acreage &amp; Auction Opportunities
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 max-w-2xl">
+          High-and-dry Central Florida parcels, agricultural boundaries, and absolute online auction opportunities starting at opening bids.
+        </p>
+</div>
+<div class="flex items-center gap-2 bg-surface-container px-4 py-2 rounded-lg text-on-surface">
+<span class="material-symbols-outlined text-primary text-[20px]">notifications_active</span>
+<span class="font-body-sm text-body-sm font-medium">Bidding Registrations Open</span>
 </div>
 </div>
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-noir-800 border border-gold-500/30 flex items-center justify-center text-gold-400">
-<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-</div>
+<!-- Auction Opportunity Grid Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- PARCEL 1 -->
+<div class="bg-surface-container rounded-xl p-6 flex flex-col justify-between shadow-lg transition-transform duration-300 hover:-translate-y-1">
 <div>
-<span class="text-[11px] uppercase tracking-wider text-gray-400 block font-semibold">Service Hub</span>
-<span class="text-sm text-gray-200">Ocala, Marion County, Gainesville, Archer &amp; Sarasota, FL</span>
+<div class="flex items-center justify-between mb-4">
+<span class="px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-label-md text-label-md uppercase tracking-wider">Absolute Auction</span>
+<span class="font-label-md text-label-md text-primary">Archer, FL</span>
+</div>
+<h3 class="font-headline-sm text-[20px] text-on-surface mb-2">
+            179th Place Acreage
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+            179th Place Archer, FL 32618. High-and-dry pasture acreage suitable for residential homestead, timber, or equestrian grounds.
+          </p>
+<div class="bg-surface-container-low p-3.5 rounded-lg mb-6">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface-variant font-label-md text-label-md uppercase">Opening Bid:</span>
+<span class="font-price-display text-[20px] text-primary">$1,000</span>
+</div>
+<div class="flex justify-between items-center text-body-sm mt-1">
+<span class="text-on-surface-variant font-label-md text-label-md uppercase">Format:</span>
+<span class="text-on-surface font-medium text-body-sm">Online Absolute</span>
 </div>
 </div>
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-noir-800 border border-gold-500/30 flex items-center justify-center text-gold-400">
-<svg class="w-5 h-5" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
 </div>
+<a class="w-full py-2.5 rounded bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary text-center font-label-lg text-label-lg uppercase tracking-wider transition-all" href="#contact">
+          Bid Details &amp; Terms
+        </a>
+</div>
+<!-- PARCEL 2 -->
+<div class="bg-surface-container rounded-xl p-6 flex flex-col justify-between shadow-lg transition-transform duration-300 hover:-translate-y-1">
 <div>
-<span class="text-[11px] uppercase tracking-wider text-gray-400 block font-semibold">Pre-Approval Partner</span>
-<span class="text-sm text-gray-200">Local Mortgage Pre-Approval available via Black Rock Mortgage</span>
+<div class="flex items-center justify-between mb-4">
+<span class="px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-label-md text-label-md uppercase tracking-wider">Absolute Auction</span>
+<span class="font-label-md text-label-md text-primary">Archer, FL</span>
+</div>
+<h3 class="font-headline-sm text-[20px] text-on-surface mb-2">
+            SW 200 Street Farmland
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+            SW 200 Street Archer, FL 32618. Prime farm acreage with established perimeter fencing, private road access, and serene country seclusion.
+          </p>
+<div class="bg-surface-container-low p-3.5 rounded-lg mb-6">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface-variant font-label-md text-label-md uppercase">Opening Bid:</span>
+<span class="font-price-display text-[20px] text-primary">$1,000</span>
+</div>
+<div class="flex justify-between items-center text-body-sm mt-1">
+<span class="text-on-surface-variant font-label-md text-label-md uppercase">Format:</span>
+<span class="text-on-surface font-medium text-body-sm">Online Absolute</span>
 </div>
 </div>
 </div>
+<a class="w-full py-2.5 rounded bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary text-center font-label-lg text-label-lg uppercase tracking-wider transition-all" href="#contact">
+          Bid Details &amp; Terms
+        </a>
 </div>
-<!-- Minimalist High-Converting Form -->
-<div class="lg:col-span-7">
-<div class="glass-card rounded-2xl p-8 border border-gold-500/30 gold-border-glow shadow-2xl">
-<h3 class="font-editorial text-2xl font-bold text-white mb-2">Schedule Confidential Consultation</h3>
-<p class="text-xs text-gray-400 mb-6">Leave your details and Nichole Roberts will contact you personally within 24 hours.</p>
-<form class="space-y-4" onsubmit="event.preventDefault(); alert('Thank you. Nichole Roberts has received your inquiry.');">
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<!-- PARCEL 3 -->
+<div class="bg-surface-container rounded-xl p-6 flex flex-col justify-between shadow-lg transition-transform duration-300 hover:-translate-y-1">
 <div>
-<label class="block text-xs uppercase font-medium text-gray-400 mb-1">Your Name</label>
-<input class="w-full bg-noir-800 border border-noir-700 rounded-lg px-4 py-3 text-sm text-white focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none transition" placeholder="John Doe" required="" type="text"/>
+<div class="flex items-center justify-between mb-4">
+<span class="px-2.5 py-1 rounded bg-surface-container-highest text-primary font-label-md text-label-md uppercase tracking-wider">Online Auction</span>
+<span class="font-label-md text-label-md text-primary">Gainesville, FL</span>
 </div>
+<h3 class="font-headline-sm text-[20px] text-on-surface mb-2">
+            SW 38 Terrace Development
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+            SW 38 Terrace Gainesville, FL 32608. Prime 2.41 acres development corridor parcel near key arteries and institutional centers.
+          </p>
+<div class="bg-surface-container-low p-3.5 rounded-lg mb-6">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface-variant font-label-md text-label-md uppercase">Opening Bid:</span>
+<span class="font-price-display text-[20px] text-primary">$1,000</span>
+</div>
+<div class="flex justify-between items-center text-body-sm mt-1">
+<span class="text-on-surface-variant font-label-md text-label-md uppercase">Scope:</span>
+<span class="text-on-surface font-medium text-body-sm">2.41 Prime Acres</span>
+</div>
+</div>
+</div>
+<a class="w-full py-2.5 rounded bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary text-center font-label-lg text-label-lg uppercase tracking-wider transition-all" href="#contact">
+          Bid Details &amp; Terms
+        </a>
+</div>
+<!-- PARCEL 4 -->
+<div class="bg-surface-container rounded-xl p-6 flex flex-col justify-between shadow-lg transition-transform duration-300 hover:-translate-y-1">
 <div>
-<label class="block text-xs uppercase font-medium text-gray-400 mb-1">Phone Number</label>
-<input class="w-full bg-noir-800 border border-noir-700 rounded-lg px-4 py-3 text-sm text-white focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none transition" placeholder="(352) 000-0000" required="" type="tel"/>
+<div class="flex items-center justify-between mb-4">
+<span class="px-2.5 py-1 rounded bg-secondary-container text-on-secondary-container font-label-md text-label-md uppercase tracking-wider">Absolute Auction</span>
+<span class="font-label-md text-label-md text-primary">Archer, FL</span>
+</div>
+<h3 class="font-headline-sm text-[20px] text-on-surface mb-2">
+            11937 SW 179 Place Ranch
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-6">
+            Archer, FL 32618. 3 Bed / 2 Bath country home sited on expansive ranch acreage with mature oaks and outbuilding storage.
+          </p>
+<div class="bg-surface-container-low p-3.5 rounded-lg mb-6">
+<div class="flex justify-between items-center text-body-sm">
+<span class="text-on-surface-variant font-label-md text-label-md uppercase">Opening Bid:</span>
+<span class="font-price-display text-[20px] text-primary">$1,000</span>
+</div>
+<div class="flex justify-between items-center text-body-sm mt-1">
+<span class="text-on-surface-variant font-label-md text-label-md uppercase">Configuration:</span>
+<span class="text-on-surface font-medium text-body-sm">3 Bed · 2 Bath Manor</span>
 </div>
 </div>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+</div>
+<a class="w-full py-2.5 rounded bg-surface-container-high text-primary hover:bg-primary hover:text-on-primary text-center font-label-lg text-label-lg uppercase tracking-wider transition-all" href="#contact">
+          Bid Details &amp; Terms
+        </a>
+</div>
+</div>
+</section>
+<!-- ==================== LEADERSHIP & PROVEN TRACK RECORD ==================== -->
+<section class="w-full bg-surface-container-low py-20 lg:py-28" id="about">
+<div class="max-w-[1440px] mx-auto px-gutter-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+<!-- Left Column: Authentic Photography Composition -->
+<div class="lg:col-span-6 relative">
+<div class="relative z-10 w-[84%] rounded-xl overflow-hidden shadow-2xl bg-surface-container">
+<img alt="Nichole Roberts Licensed Real Estate Broker All Florida Homes Realty" class="w-full h-auto object-cover object-center aspect-[1.6]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChVIoMfe4rue3lA_aAldR2X5_NMHRVRwuGsf8vRYh71Yiwuk0fB1tcC2qp2t-oX73rfCI_fQuba3qQSYct07xDgAAxUI822NTFJOM_FKWolsMjHkF4-dM1eiW1hCbQFxb9Nqi1b5lZ_4S8428m3h7AjVoIxFLBImY995CJgctkWph5yYyCPIKL-AA5sEgXOHx4SI9KjjOL9HkJBYncG44DvG6CX16Fk_Z_7KxsYB81_nQLF40AXo7mMw">
+<div class="p-4 bg-surface-container-high">
+<p class="font-headline-sm text-[16px] text-on-surface leading-snug">Nichole Roberts</p>
+<p class="font-label-md text-label-md uppercase text-primary tracking-wider">Founder &amp; Principal Broker</p>
+</div>
+</div>
+<!-- Overlapping Closing Celebration Shot -->
+<div class="absolute -bottom-10 right-0 z-20 w-[55%] rounded-xl overflow-hidden shadow-2xl bg-surface-container">
+<img alt="Nichole Roberts Client Closing Celebration" class="w-full h-auto object-cover object-top aspect-[0.9]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIs-9PQNHkfFiN-cembfpdDUJoaLLZo1F4ZJxg3CQlfnODpSRfISS_l7mbtl_C0wj6c0Snh28pHOjsYLjyogborFtroH3drBXXkCCvmLgYS8_1EHbiGC8Kp6NULOokPuU7-uUgb4kUHkSFGrOoVQXjs7AiG5FB5tnq-NtyJ8cmt91Yu4SbLBwXj70WfF_G0Qo7d5lYHERPO0T1WZfW9vDUzH7v6X34aclHeFBkpwxdoO8Dv8mqxfZ-fw">
+<div class="p-3 bg-surface-container-highest flex items-center justify-between">
+<span class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Generational Trust</span>
+<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Concise Bio & Credentials -->
+<div class="lg:col-span-6 flex flex-col pt-8 lg:pt-0">
+<div class="flex items-center gap-space-xs mb-3">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+<span class="font-label-md text-label-md uppercase tracking-[0.22em] text-primary">Brokerage Heritage</span>
+</div>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-on-surface mb-6 leading-tight">
+            Guiding Central Florida's Signature Transitions.
+          </h2>
+<p class="font-body-lg text-body-md lg:text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+            Founded in 2005 by Nichole Roberts, All Florida Homes Realty delivers boutique luxury service across Central Florida's premier equestrian and waterfront communities.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+            From million-dollar lakefront estates to expansive Marion County horse ranches, Nichole combines profound local market intelligence with unwavering client discretion.
+          </p>
+<!-- Trust Badges Strip -->
+<div class="grid grid-cols-3 gap-4 p-5 rounded-xl bg-surface-container mb-8">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">20+</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant uppercase tracking-wider mt-1">Years Continuous Leadership</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">Top 20</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant uppercase tracking-wider mt-1">Central FL Elite 2026</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">100%</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant uppercase tracking-wider mt-1">Client Satisfaction Rating</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+<a class="px-space-md py-3 rounded bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-widest hover:bg-secondary transition-all" href="#contact">
+              Consult with Nichole
+            </a>
+<div class="flex items-center gap-2 text-on-surface font-body-sm">
+<span class="material-symbols-outlined text-primary text-[19px]">call</span>
+<span class="">Direct: (352) 789-5063</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== VERIFIED CLIENT TESTIMONIALS ==================== -->
+<section class="w-full max-w-[1440px] mx-auto px-gutter-mobile lg:px-margin py-20 lg:py-28" id="reviews">
+<div class="text-center max-w-2xl mx-auto mb-16">
+<div class="flex items-center justify-center gap-space-xs mb-2">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+<span class="font-label-md text-label-md uppercase tracking-[0.22em] text-primary">Client Experiences</span>
+</div>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-on-surface">
+        Verified Client Testimonials
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+        Unfiltered acclaim from our discerning clients across Central Florida and Gulf Coast transactions.
+      </p>
+</div>
+<!-- Review Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- REVIEW 1: Cassandra Buzzard -->
+<div class="bg-surface-container p-6 rounded-xl flex flex-col justify-between shadow-md">
 <div>
-<label class="block text-xs uppercase font-medium text-gray-400 mb-1">Email Address</label>
-<input class="w-full bg-noir-800 border border-noir-700 rounded-lg px-4 py-3 text-sm text-white focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none transition" placeholder="john@example.com" required="" type="email"/>
+<div class="flex items-center gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
 </div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed italic mb-6">
+            “Nichole has been a rock through this whole process. She went over and above all expectations to get us into our dream home. Her market acumen and dedication are unmatched.”
+          </p>
+</div>
+<div class="pt-4 bg-surface-container-low px-4 py-2.5 rounded-lg flex items-center justify-between">
+<span class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface">Cassandra Buzzard</span>
+<span class="font-label-md text-label-md text-primary">Buyer</span>
+</div>
+</div>
+<!-- REVIEW 2: Donna Raney -->
+<div class="bg-surface-container p-6 rounded-xl flex flex-col justify-between shadow-md">
 <div>
-<label class="block text-xs uppercase font-medium text-gray-400 mb-1">Interest</label>
-<select class="w-full bg-noir-800 border border-noir-700 rounded-lg px-4 py-3 text-sm text-white focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none transition">
-<option>Buying a Florida Home</option>
-<option>Selling My Property</option>
-<option>Farm &amp; Equestrian Acreage</option>
-<option>Auction Inquiries</option>
-<option>General Consultation</option>
+<div class="flex items-center gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed italic mb-6">
+            “Nichole was an amazing realtor to work with. Highly recommend her services to anyone seeking waterfront acreage. Seamless closing, flawless communication from start to finish.”
+          </p>
+</div>
+<div class="pt-4 bg-surface-container-low px-4 py-2.5 rounded-lg flex items-center justify-between">
+<span class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface">Donna Raney</span>
+<span class="font-label-md text-label-md text-primary">Seller</span>
+</div>
+</div>
+<!-- REVIEW 3: Pam Rice -->
+<div class="bg-surface-container p-6 rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed italic mb-6">
+            “Nichole is professional, knowledgeable, and always has her clients' best interests at heart. She managed our multi-parcel equestrian transition effortlessly.”
+          </p>
+</div>
+<div class="pt-4 bg-surface-container-low px-4 py-2.5 rounded-lg flex items-center justify-between">
+<span class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface">Pam Rice</span>
+<span class="font-label-md text-label-md text-primary">Equestrian Client</span>
+</div>
+</div>
+<!-- REVIEW 4: Mrosemyfield -->
+<div class="bg-surface-container p-6 rounded-xl flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-1 text-primary mb-4">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed italic mb-6">
+            “We could not be happier with our experience! Nichole is exceptional, responsive at all hours, and fiercely protective of our confidentiality. 10/10 recommendation.”
+          </p>
+</div>
+<div class="pt-4 bg-surface-container-low px-4 py-2.5 rounded-lg flex items-center justify-between">
+<span class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface">Mrosemyfield</span>
+<span class="font-label-md text-label-md text-primary">Private Investor</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================== INTERACTIVE CONTACT & PRIVATE INQUIRY ==================== -->
+<section class="w-full bg-surface-container-lowest py-20 lg:py-28" id="contact">
+<div class="max-w-[1440px] mx-auto px-gutter-mobile lg:px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
+<!-- Left: Private Advisory Contact Form -->
+<div class="lg:col-span-7 bg-surface-container p-8 lg:p-12 rounded-xl shadow-2xl">
+<div class="flex items-center gap-space-xs mb-2">
+<span class="w-2 h-2 rounded-full bg-primary inline-block"></span>
+<span class="font-label-md text-label-md uppercase tracking-[0.22em] text-primary">Direct Broker Access</span>
+</div>
+<h2 class="font-headline-lg text-headline-md lg:text-headline-lg text-on-surface mb-3">
+            Schedule Confidential Consultation
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+            Complete the advisory intake below for off-market inventory, property showings, or farm evaluation.
+          </p>
+<form class="flex flex-col gap-6" id="consultation-form" onsubmit="event.preventDefault(); alert('Thank you. Nichole Roberts has received your confidential inquiry and will contact you directly.');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Full Legal Name</label>
+<input class="bg-surface-container-low px-4 py-3 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary transition-all" placeholder="e.g. Sterling H. Caldwell" required="" type="text">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Telephone Contact</label>
+<input class="bg-surface-container-low px-4 py-3 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary transition-all" placeholder="(352) 000-0000" required="" type="tel">
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Confidential Email</label>
+<input class="bg-surface-container-low px-4 py-3 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary transition-all" placeholder="client@domain.com" required="" type="email">
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Submarket of Primary Interest</label>
+<select class="bg-surface-container-low px-4 py-3 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary transition-all cursor-pointer">
+<option value="Ocala">Ocala · Equestrian Estates</option>
+<option value="Archer">Archer · Acreage &amp; Farms</option>
+<option value="Gainesville">Gainesville · Architectural</option>
+<option value="Sarasota">Sarasota · Waterfront Bay</option>
+<option value="Davenport">Davenport · Executive Golf</option>
+<option value="Multiple">Comprehensive Central Florida</option>
 </select>
 </div>
 </div>
-<div>
-<label class="block text-xs uppercase font-medium text-gray-400 mb-1">Message or Specific Property of Interest</label>
-<textarea class="w-full bg-noir-800 border border-noir-700 rounded-lg px-4 py-3 text-sm text-white focus:border-gold-500 focus:ring-1 focus:ring-gold-500 outline-none transition" placeholder="Tell us about your timeline, ideal acreage, or specific address..." rows="4"></textarea>
+<div class="flex flex-col gap-1.5">
+<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">Desired Property Scope &amp; Timing</label>
+<textarea class="bg-surface-container-low p-4 rounded text-on-surface font-body-sm focus:outline-none focus:ring-1 focus:ring-primary transition-all resize-none" placeholder="Detail your parameters (acreage, waterfront specifications, private showing dates, or portfolio disposition goals)..." rows="4"></textarea>
 </div>
-<button class="w-full py-3.5 rounded-lg bg-gradient-to-r from-gold-600 via-gold-500 to-amber-500 text-noir-950 font-bold uppercase tracking-wider text-xs hover:brightness-110 transition shadow-lg shadow-gold-500/20" type="submit">
-                  Request Private Consultation
-                </button>
+<div class="flex items-center gap-3">
+<input checked="" class="w-4 h-4 rounded bg-surface-container-low text-primary focus:ring-0 cursor-pointer" id="nda-agree" type="checkbox">
+<label class="font-body-sm text-body-sm text-on-surface-variant cursor-pointer" for="nda-agree">
+                Strict Non-Disclosure &amp; fiduciary discretion requested.
+              </label>
+</div>
+<button class="w-full py-4 rounded bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-widest hover:bg-secondary transition-all shadow-[0_0_20px_rgba(212,175,55,0.25)] flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[19px]">lock</span>
+<span class="">Transmit Confidential Inquiry</span>
+</button>
 </form>
+</div>
+<!-- Right: Brokerage Details & Geographic Presence -->
+<div class="lg:col-span-5 flex flex-col justify-between gap-8">
+<div class="bg-surface-container p-8 rounded-xl flex flex-col gap-6">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">
+              Direct Contact · Private Desk
+            </h3>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">phone_in_talk</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md uppercase text-on-surface-variant">Broker Direct Line</span>
+<a class="font-headline-sm text-[20px] text-on-surface hover:text-primary transition-colors" href="tel:3527895063">(352) 789-5063</a>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Seven days a week · 8:00 AM – 7:30 PM EST</span>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md uppercase text-on-surface-variant">Electronic Advisory</span>
+<span class="font-body-md text-body-md text-on-surface">nichole@allfloridahomesrealty.com</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Encrypted client correspondence</span>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">location_city</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md uppercase text-on-surface-variant">Central Florida Brokerage</span>
+<span class="font-body-md text-body-md text-on-surface">Marion &amp; Alachua Counties, FL</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Specializing in Ocala, Archer, Gainesville, and Sarasota</span>
+</div>
+</div>
+</div>
+<!-- Embedded Static Location Map -->
+<div class="bg-surface-container p-6 rounded-xl flex flex-col gap-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[19px]">map</span>
+<span class="font-label-lg text-label-lg uppercase tracking-wider text-on-surface">Central Florida Headquarters</span>
+</div>
+<span class="font-label-md text-label-md text-primary">FL CQ1048892</span>
+</div>
+<div class="w-full h-48 bg-cover bg-center rounded-lg shadow-inner" data-location="Ocala, Florida" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCOKUIV8BgLZAgQPz_HSXwT02V15yCjmBCULXAg3CNtXCpWq1pnIYC1-7qZNyicrtzvaduumqDioi34hAoZiSukW8jzGxxypxopE8tih4C3l0w-_uEyr6hdC1pda4D7aEKBtClo7DCL4bf4-ZsnnEQLgldahFNgXdgczXKldVZr-jdxhYN1Insy5K32KO9YlXzoe2rlmHSs6wCsM-Pn1aaIj4j_f1bmXxCn0AK3gbzk')"></div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Private estate tours conducted with private security and executive chauffeur coordination upon request.
+            </p>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- END: ContactSection -->
-</main>
-<!-- BEGIN: Footer -->
-<footer class="bg-noir-950 border-t border-gold-500/15 pt-16 pb-12 text-sm text-gray-400">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
-<!-- Col 1 -->
-<div class="space-y-4">
-<div class="flex items-center gap-2">
-<span class="font-editorial text-xl font-bold text-white tracking-tight">ALL FLORIDA <span class="text-gold-500 font-light">HOMES REALTY</span></span>
-</div>
-<p class="text-xs leading-relaxed text-gray-400">
-            Central Florida's premier boutique brokerage specializing in fine homes, acreage, equestrian retreats, and farm auctions.
-          </p>
-<p class="text-xs text-gold-400 font-mono">
-            Principal Broker: Nichole Roberts
-          </p>
-</div>
-<!-- Col 2 -->
-<div>
-<h4 class="text-xs uppercase font-bold tracking-widest text-white mb-4">Quick Navigation</h4>
-<ul class="space-y-2 text-xs">
-<li><a class="hover:text-gold-400 transition" href="#">Home</a></li>
-<li><a class="hover:text-gold-400 transition" href="#properties">Featured Listings</a></li>
-<li><a class="hover:text-gold-400 transition" href="#farms">Farm Properties &amp; Auctions</a></li>
-<li><a class="hover:text-gold-400 transition" href="#services">Boutique Services</a></li>
-<li><a class="hover:text-gold-400 transition" href="#about">About Nichole Roberts</a></li>
-</ul>
-</div>
-<!-- Col 3 -->
-<div>
-<h4 class="text-xs uppercase font-bold tracking-widest text-white mb-4">Central Florida Markets</h4>
-<ul class="space-y-2 text-xs">
-<li><a class="hover:text-gold-400 transition" href="#farms">Ocala &amp; World Equestrian Center</a></li>
-<li><a class="hover:text-gold-400 transition" href="#farms">Archer &amp; Marion Acreage</a></li>
-<li><a class="hover:text-gold-400 transition" href="#farms">Gainesville &amp; Alachua County</a></li>
-<li><a class="hover:text-gold-400 transition" href="#properties">Sarasota &amp; Gulf Coast Waterfront</a></li>
-<li><a class="hover:text-gold-400 transition" href="#properties">Davenport &amp; Polk County</a></li>
-</ul>
-</div>
-<!-- Col 4 -->
-<div>
-<h4 class="text-xs uppercase font-bold tracking-widest text-white mb-4">Direct Contact</h4>
-<p class="text-xs text-gray-300 mb-2">Central Florida Main Office:</p>
-<a class="text-gold-400 font-mono text-base font-bold block mb-4 hover:underline" href="tel:3527895063">(352) 789-5063</a>
-<p class="text-[11px] text-gray-400 leading-normal">
-            Equal Housing Opportunity. All information deemed reliable but not guaranteed.
-          </p>
-</div>
-</div>
-<div class="border-t border-noir-800 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-400 gap-4">
-<div>
-          © 2026 All Florida Homes Realty. All rights reserved.
-        </div>
-<div class="flex space-x-6">
-<a class="hover:text-gray-300" href="#">Privacy Policy</a>
-<a class="hover:text-gray-300" href="#">Terms of Service</a>
-<a class="hover:text-gray-300" href="#">MLS Compliance</a>
-</div>
-</div>
-</div>
-</footer>
-<!-- END: Footer -->
-<!-- BEGIN: InteractiveScripts -->
-<script data-purpose="mobile-menu-toggle">
-    const mobileBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+</div></main><footer class="w-full bg-surface-container-lowest"><div class="w-full px-gutter-mobile lg:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><div class="w-10 h-10 rounded flex items-center justify-center bg-surface-container-high text-primary font-headline-sm text-headline-sm">AF</div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase text-on-surface tracking-wider">All Florida Homes</span><span class="font-label-md text-label-md tracking-[0.22em] uppercase text-on-surface-variant">Realty</span></div></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Curators of architectural residences, waterfront reserves, and distinguished equestrian acreage throughout Central Florida. Discretion, bespoke representation, and generational advisory.</p><div class="flex items-center gap-space-sm"><a class="flex items-center gap-space-xs font-label-lg text-label-lg text-primary hover:text-on-surface transition-colors" href="tel:3527895063"><span class="material-symbols-outlined text-[18px]">call</span>(352) 789-5063</a><span class="text-outline-variant">•</span><span class="font-body-sm text-body-sm text-on-surface-variant">Private Brokerage Division</span></div></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg uppercase tracking-[0.16em] text-primary">Market Specialties</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li class=""><a class="hover:text-primary transition-colors" data-path="listings" href="#listings">Ocala · World Equestrian Estates</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="listings" href="#listings">Archer · Country Manors &amp; Timber</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="listings" href="#listings">Gainesville · Architectural Reserves</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="listings" href="#listings">Sarasota · Coastal &amp; Waterfront Enclaves</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="listings" href="#listings">Davenport · Executive Golf Retreats</a></li></ul></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg uppercase tracking-[0.16em] text-primary">Portfolio Navigation</span><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><li class=""><a class="hover:text-primary transition-colors" data-path="featured" href="#featured">Featured Estates</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="listings" href="#listings">Curated Inventory</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="farms-acreage" href="#farms-acreage">Farms &amp; Acreage</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="services" href="#services">Private Client Advisory</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="reviews" href="#reviews">Client Testimonials</a></li><li class=""><a class="hover:text-primary transition-colors" data-path="about" href="#about">Heritage &amp; Brokerage</a></li></ul></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><span class="font-label-lg text-label-lg uppercase tracking-[0.16em] text-primary">Private Tour Scheduling</span><p class="font-body-sm text-body-sm text-on-surface-variant">Direct confidential consultations scheduled per your itinerary across Central Florida and Gulf Coast sanctuaries.</p><a class="inline-flex items-center justify-center px-space-md py-2.5 rounded bg-surface-container-high text-primary hover:bg-secondary-container hover:text-on-secondary-container font-label-lg text-label-lg uppercase tracking-widest transition-all" data-path="contact" href="#contact">Initiate Showing Request</a><div class="flex items-center gap-space-xs pt-space-xs"><span class="material-symbols-outlined text-primary text-[18px]">verified</span><span class="font-label-md text-label-md uppercase text-on-surface-variant">Licensed Florida Real Estate Brokerage</span></div></div></div><div class="mt-space-xl pt-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant"><div class="flex flex-col sm:flex-row sm:items-center gap-space-sm"><div class="flex items-center gap-space-xs text-on-surface-variant"><span class="material-symbols-outlined text-primary text-[18px]">home</span><span class="">Equal Housing Opportunity</span></div><span class="hidden sm:inline text-outline-variant">•</span><span class="">FL License CQ1048892</span><span class="hidden sm:inline text-outline-variant">•</span><span class="">All Florida Homes Realty LLC</span></div><div class="flex items-center gap-space-md"><span class="font-body-sm text-body-sm text-on-surface-variant">© 2025 All Florida Homes Realty. All rights reserved.</span></div></div></div></footer>
 
-    if (mobileBtn && mobileMenu) {
-      mobileBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-
-      // Close mobile menu when a nav link is clicked
-      mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-        });
-      });
-    }
-  </script>
-<script data-purpose="parallax-scroll-effect">
-    // Smooth Parallax Scroll for Hero Background
-    const heroBg = document.getElementById('hero-parallax-bg');
-    if (heroBg) {
-      window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        if (scrolled < window.innerHeight) {
-          heroBg.style.transform = `translate3d(0, ${scrolled * 0.28}px, 0) scale(1.05)`;
-        }
-      }, { passive: true });
-    }
-  </script>
-<!-- END: InteractiveScripts -->
 </body></html>
